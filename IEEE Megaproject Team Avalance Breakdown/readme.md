@@ -61,7 +61,9 @@ http://127.0.0.1:5000/
 4. Integration of a chatbot using an LLM to help users with the processes
 
 
-## Authors
-
+## Details
+### Team Name: Avanlance Breakdown
+### Team Members:
 - [@Arya-Chakraborty](https://github.com/Arya-Chakraborty)
+- [@Abhi1264](https://github.com/Abhi1264)
 
