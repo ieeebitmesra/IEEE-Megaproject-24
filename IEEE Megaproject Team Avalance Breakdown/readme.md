@@ -62,7 +62,7 @@ http://127.0.0.1:5000/
 
 
 ## Details
-### Team Name: Avanlance Breakdown
+### Team Name: Avalanche Breakdown
 ### Team Members:
 - [@Arya-Chakraborty](https://github.com/Arya-Chakraborty)
 - [@Abhi1264](https://github.com/Abhi1264)
