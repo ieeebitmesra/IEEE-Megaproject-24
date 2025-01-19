@@ -15,7 +15,9 @@ FARM CONNECT aims to solve these challenges by creating a digital marketplace th
 ## 👥 Team Details
 
 **Team Name:** IGNITE  
-**Team Members:** Raghav Kumar (LEADER), Prateek Aditya
+**Team Members:** 
+Raghav Kumar (LEADER), (KIIT UNIVERSITY,Bhubneshwar)
+Prateek Aditya,  (KIIT UNIVERSITY,Bhubneshwar)
 
 ## 🌐 Domain
 
