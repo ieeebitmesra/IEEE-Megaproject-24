@@ -1,0 +1,27 @@
+# Ignore node_modules folders
+/TEAM IGNITE/frontend/node_modules/
+/TEAM IGNITE/backend/node_modules/
+
+# Ignore .env files
+/TEAM IGNITE/frontend/.env
+/TEAM IGNITE/backend/.env
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
+node_modules/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Cache
+.cache/
+dist/
+build/
