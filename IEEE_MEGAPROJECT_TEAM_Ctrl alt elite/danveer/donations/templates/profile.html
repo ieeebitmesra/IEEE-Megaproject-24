@@ -1,0 +1,15 @@
+{% extends 'main.html' %}
+{% block content %}
+<div class="container py-5 profile">
+    <h1 class="text-center mb-4">Profile</h1>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">{{ user.first_name }} {{ user.last_name }}</h5>
+            <p class="card-text"><strong>Email:</strong> {{ user.email }}</p>
+            <p class="card-text"><strong>Location:</strong> {{ user.location }}</p>
+            <p class="card-text"><strong>Role:</strong> {{ user.get_user_type_display }}</p>
+            <a href="{% url 'user_chats' %}" class="btn btn-primary">View Your Chats</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

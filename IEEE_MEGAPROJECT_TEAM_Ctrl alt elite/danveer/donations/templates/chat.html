@@ -1,0 +1,33 @@
+{% extends 'main.html' %}
+{% block content %}
+<!--Chat Section-->
+<div class="container py-5">
+    <h1 class="text-center mb-4">Chat with {{ receiver.first_name }} {{ receiver.last_name }} (@{{ receiver.username }})</h1>
+    <div class="chat-box">
+        {% for message in messages %}
+            <div class="message {% if message.sender == user %}sent{% else %}received{% endif %}">
+                <p>{{ message.message }}</p>
+                <small><strong>{{ message.sender.username }}</strong> {{ message.timestamp }}</small>
+            </div>
+        {% endfor %}
+    </div>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Send</button>
+    </form>
+
+    <!--Approve button for the card creater section-->
+    <!--on pressing this button, make a Donation object from the info from the card and remove the DonatedItem/DonationRequest-->
+    {% if user == card_creator %}
+    <form method="post" action="{% url 'accept_request' receiver.id  item.id %}">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-success mt-3">Accept {{ action_type }}</button>        
+    </form>
+    {% endif %}
+</div>
+
+<!--3rd party delivery setup section-->
+
+
+{% endblock %}

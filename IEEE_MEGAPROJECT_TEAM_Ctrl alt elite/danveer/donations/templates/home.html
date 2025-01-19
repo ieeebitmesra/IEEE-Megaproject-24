@@ -1,0 +1,58 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+<!--A tip: if the images seem to become awkward, maybe use the img-fluid class to set them as a percent width of the container size, that way it will stay the same aspect ratio-->
+
+<div class="container">
+    <!--Title Section-->
+    <div class="row">
+        <div class="col-md-6 py-5">
+            <img src="{% static 'images/header_img.png' %}" alt="header_section_img" class="img-fluid">
+        </div>
+        <div class="col-md-6 title-section py-5">
+            <h1>Welcome to Daanveer</h1>
+            <p class="lead">Connecting generosity with need.</p>
+            <p class="lead">Everyone one in our society deserves the right to be taken care of. Daanveer aims to bridge the
+                gap between people who want to donate to the needy who could benefit from such people's help through NGOs.
+            </p>
+            {% if user.is_authenticated %}
+            <a href="{% url 'explore' %}" class="btn btn-primary btn-lg">Explore</a>
+            {% else %}
+            <a href="{% url 'register' %}" class="btn btn-primary btn-lg">Get Started</a>
+            {% endif %}
+        </div>
+    </div>
+    
+    <!-- How It Works Section -->
+    <div class="row">
+        <div class="col-md-6 how-it-works-section py-5">
+            <h1>How does it work?</h1>
+            <p class="lead">Well its simple:</p>
+            <hr id="how-it-works-hr">
+            <p class="lead">
+                1. Register yourself as a donor or a beneficiary and setup your profile.<br>
+                2. Donate or request a donation or just explore the community to see how you fit in.<br>
+                3. Anything is a donation. From life saving medicines to the unused copies lying on your shelf.<br>
+                4. Donations are mapped as nearest-location-first basis to NGOs/beneficiaries who then distribute it to the needy.<br>
+                5. The beneficiaries nearest to you, will be notified of your donation and vice versa, thus eliminating 3rd party logistics.<br>
+                6. Found someone to help? Go ahead and chat with them, right here on the website. Figure things out.
+            </p>
+            <hr id="how-it-works-hr">
+            <p class="lead">Become an actual hero. Save real lives, here, now.</p>
+        </div>
+        <div class="col-md-6">
+            <img src="{% static 'images/hiw.png' %}" alt="how-it-works-img" class="img-fluid">
+        </div>
+    </div>
+    
+    <!--Feed Section-->
+    <div class="feed-section text-jsutify py-5">
+        <!--Implement feed as per reference here, once backend is done-->
+    </div>
+    
+    <!-- Testimonials Section -->
+        <!--After the backend, when there is a feaature to upload testimonials-->
+
+</div>    
+{% endblock %}
