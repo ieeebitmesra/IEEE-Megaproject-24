@@ -5,6 +5,8 @@ Welcome to **Honeyhive**, a cutting-edge platform designed to facilitate [briefl
 
 ![Honeyhive Logo](images/HIVE.gif)
 
+Deployed Link: https://honeyhive-seven.vercel.app/
+
 ## Features
 
 - **Feature 1**: Describe the feature here (e.g., "Real-time data processing for user inputs")
