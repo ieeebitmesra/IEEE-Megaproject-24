@@ -1,54 +1,181 @@
-<h1 align="center">IEEE MegaProject</h1>
-<h3 align="center">Organised by IEEE Student Branch BIT Mesra</h3>
+# FARM CONNECT 🌾
 
-# About the Event
-"Don’t compare yourself with anyone in this world. If you do so, you are insulting yourself." – Bill Gates
+A revolutionary full-stack web application connecting farmers directly with wholesale buyers, enabling global agricultural trade at fair prices.
 
-After seven successful editions, we are here to present you with an opportunity of prototyping your imagination with the IEEE Mega Project.
+## 🎯 Problem Statement
 
-IEEE Mega Project is a platform to learn and experience the entire process of making a project, from ideation to execution and then it's presentation. It is a platform for students to showcase their innovative ideas in working.
-It's a team-based project building event, where college students collaborate together to bring their ideas to reality.
+Traditional agricultural markets often disadvantage small-scale farmers through:
+- Monopolistic pricing practices
+- Limited access to diverse buyers
+- Lack of bargaining power
+- Difficulty in reaching consumers directly
 
-# Note
-**Note:**
-Ensure that your README file is comprehensive and up-to-date, covering the following mandatory details:
-- Team Details
-- Domain of your project
-- Idea
-- Achievements thus far
-- How to execute your code sample
+FARM CONNECT aims to solve these challenges by creating a digital marketplace that empowers farmers and revolutionizes agricultural commerce.
 
-These are essential details that must be included. You can refer to the `CONTRIBUTION.md` file present in this repository for a template. Copy and customize it according to your project's specifics. Feel free to add more details as needed.
+## 👥 Team Details
 
-# Timeline
-December 20, 2024 - January 18, 2025
+**Team Name:** IGNITE  
+**Team Members:** Raghav Kumar (LEADER), Prateek Aditya
 
-# How to create a Pull Request
-Before you get started, these are the steps that you need to follow only ONCE at the begining:
-- [Fork this repository](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo#fork-an-example-repository) so that you can make your changes without affecting the original project until you're ready to merge them.
-- Go to your forked repository. Notice that the end of the URL should resemble `<your_github_username>/IEEE-Megaproject-24`.
-- Clone your forked repository: Click on the green `Code` button and copy the `HTTPS` URL of the repository.
-    - Now, open `gitbash`(or `Terminal`, if you are on UNIX-system) in the folder where you want to clone the repository, and issue the following command:
-    ```
-    git clone <paste_your_cloned_URL_here>
-    ```
-    - After cloning is done, confirm that a folder named `IEEE-Megaproject-24` is present in your current working directory.
+## 🌐 Domain
 
+AgriTech | E-Commerce | Supply Chain
 
-Now, Follow the below steps for submitting each Project:
-- Copy your project folder.
-- Paste it in the local clone of `IEEE-Megaproject-24`(created in the above steps), inside the respective Project folder.
-- Rename your Project folder to your Team name.
-- Now, Right-click and open `gitbash` in the `IEEE-Megaproject-24` folder, and issue the following commands in order:
+## 💡 Core Features
+
+- **User-Friendly Interface** with simple registration for farmers and buyers
+- **Product Management System** for farmers to list their produce
+- **Advanced Search and Filter** functionality
+- **Bargain Request System** for price negotiations
+- **Shopping Cart** with multi-vendor support
+- **Ratings and Reviews** system
+- **Direct Communication Channel** between farmers and buyers
+- **Analytics Dashboard** for tracking sales and performance
+
+# Project Screenshots 📸
+
+<p align="center">
+  <img src="./images/img (1).png" alt="Screenshot 1" width="800"/><br/>
+  <em>Home Page</em>
+</p>
+
+<p align="center">
+  <img src="./images/img (2).png" alt="Screenshot 2" width="800"/><br/>
+  <em>Farmer Dashboard</em>
+</p>
+
+<p align="center">
+  <img src="./images/img (3).png" alt="Screenshot 3" width="800"/><br/>
+  <em>Product Listing</em>
+</p>
+
+<p align="center">
+  <img src="./images/img (4).png" alt="Screenshot 4" width="800"/><br/>
+  <em>Shopping Cart</em>
+</p>
+
+<p align="center">
+  <img src="./images/img (5).png" alt="Screenshot 5" width="800"/><br/>
+  <em>User Profile</em>
+</p>
+
+<p align="center">
+  <img src="./images/img (6).png" alt="Screenshot 6" width="800"/><br/>
+  <em>Messaging System</em>
+</p>
+
+<p align="center">
+  <img src="./images/img (7).png" alt="Screenshot 7" width="800"/><br/>
+  <em>Analytics Dashboard</em>
+</p>
+
+<p align="center">
+  <img src="./images/img (8).png" alt="Screenshot 8" width="800"/><br/>
+  <em>Search Results</em>
+</p>
+
+<p align="center">
+  <img src="./images/img (9).png" alt="Screenshot 9" width="800"/><br/>
+  <em>Bargaining Interface</em>
+</p>
+
+<p align="center">
+  <img src="./images/img (10).png" alt="Screenshot 10" width="800"/><br/>
+  <em>Settings Page</em>
+</p>
+<p align="center">
+  <img src="./images/img (11).png" alt="Screenshot 10" width="800"/><br/>
+  <em>Settings Page</em>
+</p>
+<p align="center">
+  <img src="./images/img (12).png" alt="Screenshot 10" width="800"/><br/>
+  <em>Settings Page</em>
+</p>
+<p align="center">
+  <img src="./images/img (13).png" alt="Screenshot 10" width="800"/><br/>
+  <em>Settings Page</em>
+</p>
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js
+- npm
+
+### Installation
+
+1. Clone the repository
+```bash
+git clone https://github.com/raghavjaiswal709/IEEE-Megaproject-24.git
+cd farm-connect
 ```
-git add .
 
-git commit -m "Your commit message"
-
-git push -u origin main
+2. Install Frontend Dependencies
+```bash
+cd Project_Farm_Connect
+npm install
 ```
-- After pushing your project to github, you need to create a Pull Request to the main IEEE Megaproject repository. For that, open your forked repository in browser, and you'll notice a big green button saying “Compare & pull request”. Press it!
-- This will open a page in which you’ll be able to further edit the description for your proposed changes. Once, you are done with those, you can click on the "Create Pull Request button", and that's it.
- Congratulations, you just made a new Pull request!!! :fire:
 
-For doubts regarding pull requests ping your project coordinators.
+3. Install Backend Dependencies
+```bash
+cd Project_Farm_Connect_Backend
+npm install
+```
+
+4. Start the Application
+
+For Frontend:
+```bash
+cd frontend
+npm run dev
+```
+
+For Backend:
+```bash
+cd backend
+npm run dev
+```
+
+## 🎯 Future Enhancements
+
+- Interactive maps with farm locations and route planning
+- Real-time chat with voice/video call capabilities
+- Integrated delivery service partnerships
+- AI-driven seasonal forecasting
+- Community forums for knowledge sharing
+
+## 🏆 Achievements
+
+- Successfully developed a full-stack solution for agricultural e-commerce
+- Created a scalable platform that addresses real-world farming challenges
+- Implemented a comprehensive feature set including user authentication, product management, and communication systems
+
+## 💪 Impact
+
+- Eliminates unnecessary middlemen to increase farmers' income
+- Provides consumers with fresher, locally-sourced produce
+- Promotes sustainable farming practices
+- Strengthens rural economies
+- Reduces food waste through better supply-demand matching
+- Fosters urban-rural connections
+
+## 🛠️ Tech Stack
+
+- **Frontend**: REACT
+- **Backend**: NODE and ExpressJS
+- **Database**: MongoDB
+
+
+
+
+## 🤝 Contributing
+
+We welcome contributions to FARM CONNECT! Please read our contributing guidelines before submitting pull requests.
+
+## 📞 Contact
+
+For any queries regarding the project, please reach out to raghavjaiswal0000@gmail.com
+---
+
+*Note: This project was developed as part of IEEE-Megaproject-24*
