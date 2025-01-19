@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    height: 100vh;
+}
+
+.ql-editor{
+    font-size: 1.05rem;
+}
+
+ /* Loader Animation */
+ .s{
+    animation : s 1s infinite;
+  }
+  @keyframes s{
+    0%{
+      opacity: 1;
+    }
+    50%{
+      opacity: 0.5;
+    }
+    100%{
+        opacity: 0.5;
+    }
+  }
+  .k{
+    animation : k 1s infinite;
+  }
+  @keyframes k{
+    0%{
+      opacity: 0.5;
+    }
+    50%{
+      opacity: 1;
+    }
+    100%{
+        opacity: 0.5;
+    }
+  }
+  .ss{
+    animation :ss 1s infinite;
+  }
+  @keyframes ss{
+    0%{
+      opacity: 0.5;
+    }
+    50%{
+      opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+  }
