@@ -1,54 +1,87 @@
-<h1 align="center">IEEE MegaProject</h1>
-<h3 align="center">Organised by IEEE Student Branch BIT Mesra</h3>
+# AI-Powered Website and Flutter App Builder  
 
-# About the Event
-"Don’t compare yourself with anyone in this world. If you do so, you are insulting yourself." – Bill Gates
+## Team Details  
+- Team Name: Mob Psycho  
+- Team Members:  
+  - Member 1: Md Saquib Jawed
+  - Member 2: Anish Mehta  
+  - Member 3: Ankit Sisodya  
 
-After seven successful editions, we are here to present you with an opportunity of prototyping your imagination with the IEEE Mega Project.
+## Domain of the Project  
+Artificial Intelligence and Web Development  
+Our project combines AI-powered tools and web development to simplify and automate the process of creating websites , web applications and android applications.
 
-IEEE Mega Project is a platform to learn and experience the entire process of making a project, from ideation to execution and then it's presentation. It is a platform for students to showcase their innovative ideas in working.
-It's a team-based project building event, where college students collaborate together to bring their ideas to reality.
+## Idea  
+Our project introduces an AI Website Builder and a Flutter App Builder with the following features:  
+1. AI Website Builder:  
+   - Allows users to generate react projects using prompts.  
+   - Uses an AI Agent to interpret the prompt and make web requests directly in the browser.  
+   - Integrated with OAuth for secure authentication.  
+   - Utilizes Gemini 2.0 Experimental Flash for enhanced performance.  
 
-# Note
-*Note:*
-Ensure that your README file is comprehensive and up-to-date, covering the following mandatory details:
-- Team Details
-- Domain of your project
-- Idea
-- Achievements thus far
-- How to execute your code sample
+2. Flutter App Builder:  
+   - A drag-and-drop interface for creating Flutter-based apps.  
+   - Automatically generates Flutter code based on the designed UI.  
+   - Streamlines app development for both beginners and experienced developers.  
 
-These are essential details that must be included. You can refer to the CONTRIBUTION.md file present in this repository for a template. Copy and customize it according to your project's specifics. Feel free to add more details as needed.
+## Achievements Thus Far  
+- Successfully implemented the AI-powered prompt-to-web request functionality in the website builder.  
+- Integrated OAuth for user authentication and data security.  
+- Built a fully functional drag-and-drop interface for the Flutter app builder.  
+- Achieved seamless Flutter code generation from UI designs.  
+- Leveraged Gemini 2.0 Flash to enhance AI responsiveness and overall performance.  
 
-# Timeline
-December 20, 2024 - January 18, 2025
+## How to Execute the Code Samples  
 
-# How to create a Pull Request
-Before you get started, these are the steps that you need to follow only ONCE at the begining:
-- [Fork this repository](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo#fork-an-example-repository) so that you can make your changes without affecting the original project until you're ready to merge them.
-- Go to your forked repository. Notice that the end of the URL should resemble <your_github_username>/IEEE-Megaproject-24.
-- Clone your forked repository: Click on the green Code button and copy the HTTPS URL of the repository.
-    - Now, open gitbash(or Terminal, if you are on UNIX-system) in the folder where you want to clone the repository, and issue the following command:
-    
-    git clone <paste_your_cloned_URL_here>
-    
-    - After cloning is done, confirm that a folder named IEEE-Megaproject-24 is present in your current working directory.
+### AI Website Builder  
+1. Prerequisites:  
+   - Install [Node.js](https://nodejs.org/).  
+   - Clone the repository:  
+     bash   
+     cd website-builder  
+       
+   - Install dependencies:  
+     bash  
+     npm install  
+       
+2. Run the Project:  
+   - Start the server:  
+     bash  
+     npm run dev  
+       
+   - Open the browser and navigate to http://localhost:3000.  
+3. Usage:  
+   - Log in using OAuth.  
+   - Enter a prompt (e.g., "Create a personal portfolio website").  
+   - View the generated project.  
 
+### Flutter App Builder  
+1. Prerequisites:  
+   - Install [Flutter SDK](https://flutter.dev/docs/get-started/install).  
+   - Clone the repository:  
+     bash   
+     cd app-builder  
+       
+   - Run flutter pub get to fetch dependencies.  
 
-Now, Follow the below steps for submitting each Project:
-- Copy your project folder.
-- Paste it in the local clone of IEEE-Megaproject-24(created in the above steps), inside the respective Project folder.
-- Rename your Project folder to your Team name.
-- Now, Right-click and open gitbash in the IEEE-Megaproject-24 folder, and issue the following commands in order:
+2. Run the Project:  
+   - Start the Flutter app:  
+     bash  
+     flutter run  
+       
+3. Usage:  
+   - Use the drag-and-drop interface to design the app UI.  
+   - Click Generate Code to view or download the Flutter code.  
 
-git add .
+## Future Scope  
+- Expand the AI's capabilities to support more complex prompts and frameworks.  
+- Add more components and templates to the drag-and-drop Flutter app builder.  
+- Integrate support for deployment to cloud platforms directly from the interface.  
 
-git commit -m "Your commit message"
+## Deployed Links
+- Website-Builder -> https://mob-psycho.vercel.app
+- App-Builder -> https://ieee-megaproject.onrender.com
 
-git push -u origin main
+---
 
-- After pushing your project to github, you need to create a Pull Request to the main IEEE Megaproject repository. For that, open your forked repository in browser, and you'll notice a big green button saying “Compare & pull request”. Press it!
-- This will open a page in which you’ll be able to further edit the description for your proposed changes. Once, you are done with those, you can click on the "Create Pull Request button", and that's it.
- Congratulations, you just made a new Pull request!!! :fire:
-
-For doubts regarding pull requests ping your project coordinators.
+We’re proud of our achievements and excited to make this tool accessible to developers everywhere. Feel free to contribute to the project by raising issues or submitting pull requests!
