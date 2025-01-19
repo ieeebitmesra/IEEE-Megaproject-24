@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Honey HIVE - Personalized Learning & Expert Mentorship</title>
+    <style>
+        :root {
+            --primary-color: #FFA500;
+            --secondary-color: #FFD700;
+            --text-color: #333;
+            --background-color: #FFF8DC;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: var(--primary-color);
+            color: white;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: var(--secondary-color) 3px solid;
+        }
+        header a {
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header .highlight, header .current a {
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+        header a:hover {
+            color: #ffffff;
+            font-weight: bold;
+        }
+        .hero {
+            min-height: 400px;
+            background: url('/placeholder.svg?height=400&width=1200') no-repeat center center/cover;
+            text-align: center;
+            color: black;
+        }
+        .hero h1 {
+            margin-top: 100px;
+            font-size: 55px;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .button {
+            display: inline-block;
+            font-size: 18px;
+            color: white;
+            background: var(--primary-color);
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background: var(--secondary-color);
+            color: var(--text-color);
+        }
+        .features {
+            margin-top: 20px;
+        }
+        .feature-box {
+            float: left;
+            text-align: center;
+            width: 30%;
+            padding: 20px;
+        }
+        .feature-box img {
+            width: 400px;
+            height: 400px;
+        }
+        footer {
+            padding: 20px;
+            margin-top: 20px;
+            color: white;
+            background-color: var(--primary-color);
+            text-align: center;
+        }
+        @media(max-width: 768px) {
+            header #branding,
+            header nav,
+            header nav li,
+            .feature-box {
+                float: none;
+                text-align: center;
+                width: 100%;
+            }
+            .hero h1 {
+                font-size: 40px;
+            }
+        }
+        .center-img {
+    display: block; /* Ensures that the image is treated as a block-level element */
+    margin-left: auto; /* Automatically adjusts the left margin */
+    margin-right: auto; /* Automatically adjusts the right margin */
+    width: 300px; /* Adjust the width of the image */
+    height: auto; /* Maintains the aspect ratio of the image */
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <!-- <div class="container">
+            <div id="branding">
+                <h1><span class="highlight">Honey</span> HIVE</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="current"><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#mentorship">Mentorship</a></li>
+                </ul>
+            </nav>
+        </div> -->
+        <img src="images/HIVE.gif" alt="logo" class="center-img">
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Welcome to Honey HIVE</h1>
+            <p>Discover personalized learning paths and expert mentorship</p>
+            <a href="#get-started" class="button">Get Started</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <div class="feature-box">
+                <img src="images/progess.jpg" alt="Personalized Dashboard">
+                <h3>Personalized Dashboards</h3>
+                <p>Track your progress and access tailored course recommendations</p>
+            </div>
+            <div class="feature-box">
+                <img src="images/ment.png" alt="Expert Mentorship">
+                <h3>Expert Mentorship</h3>
+                <p>Connect with industry professionals for guidance and support</p>
+            </div>
+            <div class="feature-box">
+                <img src="images/off.img.png" alt="Interactive Learning">
+                <h3>Interactive Learning</h3>
+                <p>Engage with hands-on projects and collaborative assignments</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Honey HIVE. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    navLinks.forEach(link => link.parentElement.classList.remove('current'));
+                    this.parentElement.classList.add('current');
+                    alert(`Navigating to ${this.textContent} page`);
+                });
+            });
+
+            const getStartedButton = document.querySelector('.hero .button');
+            getStartedButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                alert('Welcome to Honey HIVE! Let\'s get started with your personalized learning journey.');
+            });
+        });
+    </script>
+</body>
+</html>

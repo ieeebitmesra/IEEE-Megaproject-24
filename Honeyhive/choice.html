@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education & Tech Interests Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            backface-visibility: initial;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        h1 {
+            margin-top: 0;
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-top: 1rem;
+            color: #555;
+        }
+        input, select {
+            margin-top: 0.5rem;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            margin-top: 1rem;
+            padding: 0.5rem;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+        .checkbox-group label {
+            display: flex;
+            align-items: center;
+            margin-top: 0;
+        }
+        .checkbox-group input {
+            margin-right: 0.5rem;
+        }
+        #learningPaths {
+            margin-top: 2rem;
+        }
+        .path {
+            background-color: #f0f0f0;
+            padding: 1rem;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+        }
+        .path h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        .path ul {
+            margin: 0;
+            padding-left: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Education & Tech Interests</h1>
+        <form id="educationForm">
+            <label for="educationLevel">Education Level:</label>
+            <select id="educationLevel" required>
+                <option value="">Select your education level</option>
+                <option value="highSchool">High School</option>
+                <option value="bachelors">Bachelor's Degree</option>
+                <option value="masters">Master's Degree</option>
+                <option value="phd">Ph.D.</option>
+            </select>
+
+            <label for="major">Major:</label>
+            <input type="text" id="major" required placeholder="Enter your major">
+
+            <label for="graduationYear">Graduation Year:</label>
+            <input type="number" id="graduationYear" required placeholder="Enter your graduation year">
+
+            <label>Technology Interests:</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="interests" value="webdev"> Web Development</label>
+                <label><input type="checkbox" name="interests" value="mobile"> Mobile Development</label>
+                <label><input type="checkbox" name="interests" value="ai"> Artificial Intelligence</label>
+                <label><input type="checkbox" name="interests" value="dataScience"> Data Science</label>
+                <label><input type="checkbox" name="interests" value="cybersecurity"> Cybersecurity</label>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <div id="learningPaths"></div>
+    </div>
+
+    <script>
+        document.getElementById('educationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const educationLevel = document.getElementById('educationLevel').value;
+            const major = document.getElementById('major').value;
+            const graduationYear = document.getElementById('graduationYear').value;
+            const interests = Array.from(document.querySelectorAll('input[name="interests"]:checked')).map(el => el.value);
+
+            if (educationLevel && major && graduationYear && interests.length > 0) {
+                showLearningPaths(educationLevel, major, graduationYear, interests);
+            } else {
+                alert('Please fill out all fields and select at least one interest.');
+            }
+        });
+
+        function showLearningPaths(educationLevel, major, graduationYear, interests) {
+            const learningPathsDiv = document.getElementById('learningPaths');
+            learningPathsDiv.innerHTML = `<h2>Your Personalized Learning Paths</h2>
+                                          <p>Based on your ${educationLevel} in ${major} (graduating ${graduationYear})</p>`;
+
+            const paths = {
+                webdev: {
+                    title: 'Web Development Path',
+                    description: 'Learn HTML, CSS, JavaScript, and modern frameworks like React.',
+                    courses: ['Intro to HTML/CSS', 'JavaScript Fundamentals', 'React Basics']
+                },
+                mobile: {
+                    title: 'Mobile Development Path',
+                    description: 'Master mobile app development for iOS and Android.',
+                    courses: ['iOS Development with Swift', 'Android Development with Kotlin', 'React Native']
+                },
+                ai: {
+                    title: 'Artificial Intelligence Path',
+                    description: 'Dive into machine learning, neural networks, and AI applications.',
+                    courses: ['Intro to Machine Learning', 'Neural Networks and Deep Learning', 'AI Ethics']
+                },
+                dataScience: {
+                    title: 'Data Science Path',
+                    description: 'Learn to analyze and interpret complex data.',
+                    courses: ['Statistics for Data Science', 'Python for Data Analysis', 'Big Data Technologies']
+                },
+                cybersecurity: {
+                    title: 'Cybersecurity Path',
+                    description: 'Master the techniques to protect systems and networks from digital attacks.',
+                    courses: ['Network Security Fundamentals', 'Ethical Hacking', 'Cryptography']
+                }
+            };
+
+            interests.forEach(interest => {
+                if (paths[interest]) {
+                    const path = paths[interest];
+                    learningPathsDiv.innerHTML += `
+                        <div class="path">
+                            <h3>${path.title}</h3>
+                            <p>${path.description}</p>
+                            <ul>
+                                ${path.courses.map(course => `<li>${course}</li>`).join('')}
+                            </ul>
+                        </div>
+                    `;
+                }
+            });
+
+            learningPathsDiv.innerHTML += '<button onclick="resetForm()">Back to Form</button>';
+            document.getElementById('educationForm').style.display = 'none';
+            learningPathsDiv.style.display = 'block';
+        }
+
+        function resetForm() {
+            document.getElementById('educationForm').reset();
+            document.getElementById('educationForm').style.display = 'block';
+            document.getElementById('learningPaths').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
