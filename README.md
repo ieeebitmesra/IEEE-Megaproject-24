@@ -3,7 +3,7 @@
 
 Honey Priya and Shreyash Singh - BIT MESRA
 
-Welcome to **Honeyhive**, a cutting-edge platform designed to facilitate [briefly describe the primary function of the project]. Honeyhive aims to provide [mention your goals, e.g., community, user experience, or service enhancements].
+Welcome to **Honeyhive**, a cutting-edge platform .
 
 ![Honeyhive Logo](images/HIVE.gif)
 
