@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        button {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Survey Results</h1>
+    <button onclick="getSurveyResults()">Get Survey Results</button>
+    <p id="results-info"></p>
+    <script>
+        async function getSurveyResults() {
+            const response = await fetch('/survey_results', { method: 'GET' });
+            const data = await response.json();
+            document.getElementById('results-info').innerText = `Response 1: ${data.Response1}\nResponse 2: ${data.Response2}`;
+        }
+    </script>
+</body>
+</html>

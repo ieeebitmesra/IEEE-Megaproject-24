@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorand Survey</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        button {
+            margin: 10px 0;
+        }
+        h1 {
+            font-size: 24px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+    
+    Algorand Survey
+    </h1>
+    <div>
+        <h2>Create Account</h2>
+        <button onclick="createAccount()">Create Account</button>
+        <p id="account-info"></p>
+    </div>
+    
+   
+    <script>
+        async function createAccount() {
+            const response = await fetch('/create_account', { method: 'POST' });
+            const data = await response.json();
+            document.getElementById('account-info').innerText = `Address: ${data.address}\nMnemonic: ${data.mnemonic}`;
+        }
+
+        
+        
+    </script>
+</body>
+</html>

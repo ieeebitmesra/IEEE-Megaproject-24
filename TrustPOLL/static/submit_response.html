@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorand Survey</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        button {
+            margin: 10px 0;
+        }
+        h1 {
+            font-size: 24px;
+            text-align: center;
+        }
+        #response{
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+    
+    Algorand Survey
+    </h1>
+    <div>
+        <h2>Submit Response</h2>
+        <input type="text" id="response" placeholder='Enter response (1 or 2)'>
+        <button onclick="submitResponse()">Submit Response [Option 1 or 2]</button>
+        <p id="response-info"></p>
+    </div>
+    
+   
+    <script>
+        const option1 = localStorage.getItem('option1');
+        const option2 = localStorage.getItem('option2');
+        const question = localStorage.getItem('question');
+        // Update the placeholder for the response input field
+        document.getElementById('response').placeholder = `${question} (${option1} or ${option2})`;
+        async function submitResponse() {
+            const response = document.getElementById('response').value;
+            const res = await fetch('/submit_response', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ response })
+            });
+            const data = await res.json();
+            document.getElementById('response-info').innerText = `Response submitted with transaction ID: ${data.txid}`;
+        }
+
+        
+        
+    </script>
+</body>
+</html>
