@@ -1,0 +1,15 @@
+<!-- Since the success variable is an array, we need to check whether it exists and has a length. -->
+<% if (success && success.length) { %>
+<div
+  class="alert alert-success alert-dismissible fade show col-6 offset-3"
+  role="alert"
+>
+  <%= success %>
+  <button
+    type="button"
+    class="btn-close"
+    data-bs-dismiss="alert"
+    aria-label="Close"
+  ></button>
+</div>
+<% } %>
