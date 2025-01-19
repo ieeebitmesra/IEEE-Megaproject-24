@@ -36,64 +36,65 @@ AgriTech | E-Commerce | Supply Chain
 
 <p align="center">
   <img src="./images/img (1).png" alt="Screenshot 1" width="800"/><br/>
-  <em>Home Page</em>
+  <em>Landing Page</em>
 </p>
 
 <p align="center">
   <img src="./images/img (2).png" alt="Screenshot 2" width="800"/><br/>
-  <em>Farmer Dashboard</em>
+  <em>Login Page</em>
 </p>
 
 <p align="center">
   <img src="./images/img (3).png" alt="Screenshot 3" width="800"/><br/>
-  <em>Product Listing</em>
+  <em>Register Page</em>
 </p>
 
 <p align="center">
   <img src="./images/img (4).png" alt="Screenshot 4" width="800"/><br/>
-  <em>Shopping Cart</em>
+  <em>Farmer DashBoard</em>
 </p>
 
 <p align="center">
   <img src="./images/img (5).png" alt="Screenshot 5" width="800"/><br/>
-  <em>User Profile</em>
+  <em>Product Listing for Farmer</em>
 </p>
 
 <p align="center">
   <img src="./images/img (6).png" alt="Screenshot 6" width="800"/><br/>
-  <em>Messaging System</em>
+  <em>Add Product Page for Farmer</em>
 </p>
 
 <p align="center">
   <img src="./images/img (7).png" alt="Screenshot 7" width="800"/><br/>
-  <em>Analytics Dashboard</em>
+  <em>Landing Page for wholeSeller</em>
 </p>
 
 <p align="center">
   <img src="./images/img (8).png" alt="Screenshot 8" width="800"/><br/>
-  <em>Search Results</em>
+  <em>View Single Product</em>
 </p>
 
 <p align="center">
   <img src="./images/img (9).png" alt="Screenshot 9" width="800"/><br/>
-  <em>Bargaining Interface</em>
+  <em>placing order page</em>
 </p>
 
 <p align="center">
   <img src="./images/img (10).png" alt="Screenshot 10" width="800"/><br/>
-  <em>Settings Page</em>
+  <em>Bargain Page for WHoleselelr</em>
 </p>
-<p align="center">
-  <img src="./images/img (11).png" alt="Screenshot 10" width="800"/><br/>
-  <em>Settings Page</em>
-</p>
+
 <p align="center">
   <img src="./images/img (12).png" alt="Screenshot 10" width="800"/><br/>
-  <em>Settings Page</em>
+  <em>Bargain Request for Wholeseller</em>
 </p>
 <p align="center">
   <img src="./images/img (13).png" alt="Screenshot 10" width="800"/><br/>
-  <em>Settings Page</em>
+  <em>Bargain Requests for Farmer</em>
+</p>
+<p align="center">
+  <img src="./images/img (11).png" alt="Screenshot 10" width="800"/><br/>
+  <em>CART Page</em>
 </p>
 
 ## 🚀 Getting Started
