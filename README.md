@@ -5,6 +5,20 @@
 ![image](https://github.com/user-attachments/assets/d070eda5-8acb-47b6-87ae-770176bfdd25)
 ![image](https://github.com/user-attachments/assets/9b5e5872-cd3b-4057-9362-9d5bea429ded)
 
+### Team Details
+
+Domain: Educational Counseling System
+
+Idea: A system to assist students in selecting colleges based on rank, quota, and other preferences.
+
+Achievements Thus Far:
+
+Successfully implemented dynamic filtering of colleges.
+
+Integrated chatbot for real-time assistance.
+
+Developed an intuitive user interface.
+
 ## Installation
 
 1. Clone the repository:
