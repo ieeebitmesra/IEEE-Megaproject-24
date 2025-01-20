@@ -1,81 +1,54 @@
-# CyberLife - EcoChain
+<h1 align="center">IEEE MegaProject</h1>
+<h3 align="center">Organised by IEEE Student Branch BIT Mesra</h3>
 
-## Team Details
+# About the Event
+"Don’t compare yourself with anyone in this world. If you do so, you are insulting yourself." – Bill Gates
 
-**Team Name:** CYBERLIFE  
-**Members:**  
-1. Parth Nath Chauhan  
-2. Subhrodeep Ghosh  
+After seven successful editions, we are here to present you with an opportunity of prototyping your imagination with the IEEE Mega Project.
 
----
+IEEE Mega Project is a platform to learn and experience the entire process of making a project, from ideation to execution and then it's presentation. It is a platform for students to showcase their innovative ideas in working.
+It's a team-based project building event, where college students collaborate together to bring their ideas to reality.
 
-## Domain of the Project
+# Note
+**Note:**
+Ensure that your README file is comprehensive and up-to-date, covering the following mandatory details:
+- Team Details
+- Domain of your project
+- Idea
+- Achievements thus far
+- How to execute your code sample
 
-**Blockchain-Driven Carbon Management**  
-EcoChain integrates blockchain technology for transparency, automation, and enhanced carbon credit management, transforming emissions control for a sustainable future.
+These are essential details that must be included. You can refer to the `CONTRIBUTION.md` file present in this repository for a template. Copy and customize it according to your project's specifics. Feel free to add more details as needed.
 
----
+# Timeline
+December 20, 2024 - January 18, 2025
 
-## Project Idea
+# How to create a Pull Request
+Before you get started, these are the steps that you need to follow only ONCE at the begining:
+- [Fork this repository](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo#fork-an-example-repository) so that you can make your changes without affecting the original project until you're ready to merge them.
+- Go to your forked repository. Notice that the end of the URL should resemble `<your_github_username>/IEEE-Megaproject-24`.
+- Clone your forked repository: Click on the green `Code` button and copy the `HTTPS` URL of the repository.
+    - Now, open `gitbash`(or `Terminal`, if you are on UNIX-system) in the folder where you want to clone the repository, and issue the following command:
+    ```
+    git clone <paste_your_cloned_URL_here>
+    ```
+    - After cloning is done, confirm that a folder named `IEEE-Megaproject-24` is present in your current working directory.
 
-EcoChain aims to address the challenges in carbon management by leveraging blockchain technology. It ensures data transparency, automated credit systems, and the utilization of XRC-20 tokens for carbon trading. The platform fosters user-friendly interfaces, incentivizes eco-friendly practices, ensures compliance, and raises public awareness about sustainable practices.
 
-**Key Features:**  
-- Transparency in recording carbon emissions on the XDC Blockchain EVM.  
-- Automated carbon credit systems to incentivize emission reduction.  
-- Development of the XRC-20 Token (GCT) for carbon credit management.
+Now, Follow the below steps for submitting each Project:
+- Copy your project folder.
+- Paste it in the local clone of `IEEE-Megaproject-24`(created in the above steps), inside the respective Project folder.
+- Rename your Project folder to your Team name.
+- Now, Right-click and open `gitbash` in the `IEEE-Megaproject-24` folder, and issue the following commands in order:
+```
+git add .
 
----
+git commit -m "Your commit message"
 
-## Achievements Thus Far
+git push -u origin main
+```
+- After pushing your project to github, you need to create a Pull Request to the main IEEE Megaproject repository. For that, open your forked repository in browser, and you'll notice a big green button saying “Compare & pull request”. Press it!
+- This will open a page in which you’ll be able to further edit the description for your proposed changes. Once, you are done with those, you can click on the "Create Pull Request button", and that's it.
+ Congratulations, you just made a new Pull request!!! :fire:
 
-- Identified target users, including corporations, government agencies, and environmental groups.  
-- Designed a transparent system for carbon emission recording and management.  
-- Tackled challenges related to data integrity, scalability, and tokenomics.  
-- Created a roadmap for global adoption and integration with other sustainability efforts.
-
----
-
-## How to Execute the Code Sample
-
-1. **Prerequisites:**  
-   - Install Node.js and npm.  
-   - Ensure you have access to the XDC Blockchain EVM network.  
-
-2. **Setup:**  
-   - Clone the repository: `git clone <repository_link>`  
-   - Navigate to the project directory: `cd CyberLife-EcoChain`  
-   - Install dependencies: `npm install`  
-
-3. **Run the Project:**  
-   - Start the server: `npm run dev`  
-   - Access the application on your local machine at `http://localhost:3000`.  
-
-4. **Testing the Features:**  
-   - Use the provided sample data for carbon emission transactions.  
-   - Execute token transfers using the XRC-20 smart contract.
-
----
-
-## Timeline
-
-### December 20, 2024 - January 18, 2025
-- **Week 1:** Finalize the platform's UI/UX design and core blockchain functionalities.  
-- **Week 2:** Integrate XRC-20 token-based carbon credit systems.  
-- **Week 3:** Perform rigorous testing for scalability and data integrity.  
-- **Week 4:** Document findings and prepare for a global showcase.  
-
----
-
-## Future Work
-
-1. **Global Adoption:**  
-   - Expand EcoChain’s reach to global markets, becoming a hub for carbon credit trading and sustainability initiatives.
-
-2. **Ecosystem Integration:**  
-   - Collaborate with IoT devices, supply chain systems, and renewable energy projects for a comprehensive sustainability approach.
-
-3. **Enhanced Tokenomics:**  
-   - Refine the token economy to incentivize eco-friendly behaviors effectively.
-
----
+For doubts regarding pull requests ping your project coordinators.
