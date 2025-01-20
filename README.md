@@ -1,54 +1,77 @@
-<h1 align="center">IEEE MegaProject</h1>
-<h3 align="center">Organised by IEEE Student Branch BIT Mesra</h3>
+# Dynamic College Counseling System
+---
 
-# About the Event
-"Don’t compare yourself with anyone in this world. If you do so, you are insulting yourself." – Bill Gates
+### Screenshots
+![image](https://github.com/user-attachments/assets/d070eda5-8acb-47b6-87ae-770176bfdd25)
+![image](https://github.com/user-attachments/assets/9b5e5872-cd3b-4057-9362-9d5bea429ded)
 
-After seven successful editions, we are here to present you with an opportunity of prototyping your imagination with the IEEE Mega Project.
+## Installation
 
-IEEE Mega Project is a platform to learn and experience the entire process of making a project, from ideation to execution and then it's presentation. It is a platform for students to showcase their innovative ideas in working.
-It's a team-based project building event, where college students collaborate together to bring their ideas to reality.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/GopalDwivedii/Career_Counseling.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd Career_Counseling
+   ```
+3. Open `text1.html` in your browser to access the website.
 
-# Note
-**Note:**
-Ensure that your README file is comprehensive and up-to-date, covering the following mandatory details:
-- Team Details
-- Domain of your project
-- Idea
-- Achievements thus far
-- How to execute your code sample
+Step-by-Step Guide to Generate a Google API Key via Al Studio for chatbot
+1. Visit Al Studio API Key Page:
+Open your browser and navigate to https://aistudio.google.com/app/apikey.
+2. Sign In with Google Account:
+Log in with the Google account you want to associate with the API key.
+3. Create a New API Key:
+• Once signed in, locate the "Create API Key" or "Generate Key" button on the page.
+• Click the button to initiate the key generation process.
+• Copy the key and paste it in as 'API_KEY' constant variable in test1.html
 
-These are essential details that must be included. You can refer to the `CONTRIBUTION.md` file present in this repository for a template. Copy and customize it according to your project's specifics. Feel free to add more details as needed.
+## Project Overview
+The **Dynamic College Counseling System** is an interactive website designed to assist students in their college selection process. This system allows users to filter colleges based on quotas and categories such as General, SC/ST, and others, according to their rank. The website is built using HTML, CSS, and JavaScript, offering a visually appealing and user-friendly experience.
 
-# Timeline
-December 20, 2024 - January 18, 2025
+## Key Features
 
-# How to create a Pull Request
-Before you get started, these are the steps that you need to follow only ONCE at the begining:
-- [Fork this repository](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo#fork-an-example-repository) so that you can make your changes without affecting the original project until you're ready to merge them.
-- Go to your forked repository. Notice that the end of the URL should resemble `<your_github_username>/IEEE-Megaproject-24`.
-- Clone your forked repository: Click on the green `Code` button and copy the `HTTPS` URL of the repository.
-    - Now, open `gitbash`(or `Terminal`, if you are on UNIX-system) in the folder where you want to clone the repository, and issue the following command:
-    ```
-    git clone <paste_your_cloned_URL_here>
-    ```
-    - After cloning is done, confirm that a folder named `IEEE-Megaproject-24` is present in your current working directory.
+### 1. **Dynamic College Filtering**
+   - Filter colleges based on various quotas and categories.
+   - Search colleges according to ranks and preferences.
+
+### 2. **College Comparison Tool**
+   - Compare two colleges side by side.
+   - View detailed information such as course offerings, seat availability, fees, and campus facilities.
+
+### 3. **Chatbot Assistance**
+   - Real-time chatbot to provide instant assistance.
+   - Answer queries about colleges, categories, and other related topics.
+
+### 4. **User-Friendly Interface**
+   - Attractive and responsive design for an engaging user experience.
+   - Simplified navigation to ensure accessibility for all users.
+
+## Technologies Used
+
+- **Frontend:**
+  - HTML for structure.
+  - CSS for styling and design.
+  - JavaScript for interactivity and dynamic functionalities.
+
+- **Chatbot Integration:**
+  - AI-powered chatbot using JavaScript libraries and APIs.
+
+## How to Use
+
+1. **Filter Colleges:**
+   - Enter your rank and select your category (e.g., General, SC/ST).
+   - Apply filters to narrow down colleges.
+
+2. **Compare Colleges:**
+   - Select two colleges to compare.
+   - View a detailed side-by-side comparison.
+
+3. **Chatbot Assistance:**
+   - Click on the chatbot icon to initiate a conversation.
+   - Ask queries related to colleges, ranks, and more.
 
 
-Now, Follow the below steps for submitting each Project:
-- Copy your project folder.
-- Paste it in the local clone of `IEEE-Megaproject-24`(created in the above steps), inside the respective Project folder.
-- Rename your Project folder to your Team name.
-- Now, Right-click and open `gitbash` in the `IEEE-Megaproject-24` folder, and issue the following commands in order:
-```
-git add .
-
-git commit -m "Your commit message"
-
-git push -u origin main
-```
-- After pushing your project to github, you need to create a Pull Request to the main IEEE Megaproject repository. For that, open your forked repository in browser, and you'll notice a big green button saying “Compare & pull request”. Press it!
-- This will open a page in which you’ll be able to further edit the description for your proposed changes. Once, you are done with those, you can click on the "Create Pull Request button", and that's it.
- Congratulations, you just made a new Pull request!!! :fire:
-
-For doubts regarding pull requests ping your project coordinators.
+## Contributing
+We welcome contributions to enhance the project! Feel free to submit pull requests or report issues.
