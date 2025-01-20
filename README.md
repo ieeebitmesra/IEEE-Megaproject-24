@@ -32,9 +32,12 @@ SAFE REACH is a crowd-sourced disaster management application designed to operat
 
 ## Acheivements So Far
 - Successfully developed a working prototype with core features such as distress call management, real-time updates, and resource tracking.
-- Implemented offline communication using LoRa modules, ensuring connectivity in network-deprived areas.
+- Developed the mobile app using Flutter, ensuring smooth performance across Android and iOS devices.
+- Designed login functionalities for Users, Admins, Businesses, and NGOs with customized dashboards.
+- Implemented LoRa-based communication to ensure seamless operation even in no-network zones.
 - Integrated Firebase for cloud data storage and user authentication.
-- Developed disaster mapping features powered by crowd-sourced data and IoT sensor inputs.
+- Developed a crowd-powered disaster map aggregating user reports and sensor data for real-time situational awareness.
+- Enabled users to donate essential supplies and locate nearby resource stations effectively.
 
 ## Demo Video
 We’ve put together a detailed working demo of the SAFE REACH application, showcasing its key features and functionalities in action.
