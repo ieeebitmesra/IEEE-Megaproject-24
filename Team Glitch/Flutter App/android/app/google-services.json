@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "572870971203",
+    "project_id": "peacify-cf1a5",
+    "storage_bucket": "peacify-cf1a5.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:572870971203:android:1943afcd5e6f591bbb69f6",
+        "android_client_info": {
+          "package_name": "com.example.peacify"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "572870971203-4m8revpai0p57j56gvjhpvqj1crpjein.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.peacify",
+            "certificate_hash": "aa14a810a5428c4477d02f3f0def183425342196"
+          }
+        },
+        {
+          "client_id": "572870971203-erqel7jfkgu75tgmhefbok5497tc02k3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCP4BuqG4n-eJ1jZ3U2zlr1ZC6F6iqFFDo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "572870971203-erqel7jfkgu75tgmhefbok5497tc02k3.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "572870971203-qctloseeh50kk077o5mb00qgjsbv657i.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.peacify"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
