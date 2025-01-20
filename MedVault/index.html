@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MedVault Login</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="login.js" defer></script>
+
+ 
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <h1>MedVault</h1>
+    <!-- <nav>
+        <a href="./dashboard.html">Home</a>
+        <a href="./medical-records2.html" >Medical Records</a>
+        <a href="#analytics">Analytics</a>
+        <a href="./contacts.html">Contacts</a>
+    </nav> -->
+</header>
+  <div id="loading-screen">
+    <div class = "spinner" >
+    </div><p id ="Name">MedVault</p>
+  </div>
+
+  <!-- Login Container -->
+  <div class="login-container">
+    <div class="login-box">
+      <h2>Login to MedVault</h2>
+      <form>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+        <button type="submit" class="login-button" id="login-button">Login</button>
+      </form>
+
+    <div class="social-login">
+       
+
+        <button class="google-login" id="google-button">Login with Google</button>
+        <button class="facebook-login" id="facebook-button">Login with Facebook</button>
+      </div>
+
+      <div class="create-account">
+        <p>Don't have an account? <a href="./signup.html">Create one</a></p>
+
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 MedVault. All rights reserved.
+</footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const loadingScreen = document.getElementById("loading-screen");
+      const mainContent = document.getElementById("login-container");
+
+      // Simulate loading time (e.g., for demonstration)
+      setTimeout(() => {
+        loadingScreen.style.display = "none"; // Hide the loading screen
+        mainContent.style.display = "block"; // Show the main content
+      }, 3000); // 2-second delay
+    });
+  </script>
+</body>
+</html>

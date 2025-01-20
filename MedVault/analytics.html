@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics Dashboard</title>
+    <link rel="stylesheet" href="analytics.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.11/firebase-firestore.js"></script>
+</head>
+<body>
+   <body>
+    <header>
+        <h1 id = "name" >MedVault</h1>
+        <nav>
+            <a href="./dashboard.html">Home</a>
+            <a href="./medical-records2.html" >Medical Records</a>
+            <a href="./analytics.html">Analytics</a>
+            <a href="./contacts.html">Contacts</a>
+        </nav>
+    </header>
+    <div class="container1">
+        <h1>Analytics Dashboard</h1>
+        <div class="container">
+            <div class="chart-container">
+                <h2>Gender Distribution</h2>
+                <div class="chart"><canvas id="gender-chart"></canvas></div>
+            </div>
+            <div class="chart-container">
+                <h2>Diabetic Percentage</h2>
+                <div class="chart"><canvas id="diabetic-chart"></canvas></div>
+            </div>
+            <div class="chart-container">
+                <h2>Alcohol Consumption Distribution</h2>
+                <div class="chart"><canvas id="alcohol-chart"></canvas></div>
+            </div>
+            
+        </div>
+    </div>
+    <script type="module" src="./analytics.js"></script>
+
+    <footer>
+        © 2025 MedVault. All rights reserved.
+    </footer>
+</body>
+
+</html>

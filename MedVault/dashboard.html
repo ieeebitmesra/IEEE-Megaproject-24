@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedVault - Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f8fb;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 16px;
+        }
+        header nav a:hover {
+            text-decoration: underline;
+        }
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px;
+            flex-wrap: wrap;
+        }
+        .hero-text {
+            max-width: 50%;
+            flex: 1;
+        }
+        .hero-text h1 {
+            font-size: 48px;
+            color: #2c3e50;
+        }
+        .hero-text p {
+            font-size: 18px;
+            color: #34495e;
+            margin: 20px 0;
+        }
+        .cta-button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            display: inline-block;
+        }
+        .cta-button:hover {
+            background-color: #218838;
+        }
+        .hero-image {
+            flex: 1;
+            text-align: center;
+        }
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #f1f1f1;
+            margin-top: auto;
+            background: #28a745;
+        }
+        #description {
+            font-family: "Helvetica, Arial, Georgia, Tahoma, Roboto";
+        }
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            header nav {
+                flex-wrap: wrap;
+            }
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-text {
+                max-width: 100%;
+            }
+            .cta-button {
+                margin: 20px 0;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MedVault</h1>
+        <nav>
+            <a href="./dashboard.html">Home</a>
+            <a href="./medical-records2.html" >Medical Records</a>
+            <a href="./analytics.html">Analytics</a>
+            <a href="./contacts.html">Contacts</a>
+        </nav>
+    </header>
+    <section class="hero">
+        <div class="hero-text">
+            <h1 class="text"></h1>
+            <p id="description">
+                A website for doctors to store and analyze patient data with ease and efficiency. MedVault ensures secure access to critical patient information, enabling seamless collaboration and improved decision-making. With user-friendly analytics and detailed reports, MedVault empowers healthcare professionals to deliver better care.
+            </p>
+            <a href="featuresFinal.html" class="cta-button">Learn More</a>
+        </div>
+        <div class="hero-image">
+            <img src="doctor-patient-interaction.png" alt="Doctor interacting with a patient">
+        </div>
+    </section>
+    <footer>
+        &copy; 2025 MedVault. All rights reserved.
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var typed = new Typed(".text", {
+            strings: ["Welcome to MedVault"],
+            typeSpeed: 100,
+            backSpeed: 100,
+            backDelay: 1000,
+            loop: true
+        });
+    </script>
+</body>
+</html>

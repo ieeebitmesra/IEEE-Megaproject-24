@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient form</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding:0;
+            margin:0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom right, #f0f9ff, #cbebff);
+  color: #333;
+  display: flex; 
+  flex-direction: column; 
+  min-height: 100vh; 
+}
+
+
+
+
+header {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 16px;
+}
+header nav a:hover {
+  text-decoration: underline;
+}
+
+
+        footer {
+  text-align: center;
+  padding: 20px 0;
+  background: #28a745;
+  color: white;
+  font-size: 14px;
+  margin-top: auto;
+  
+ 
+}
+
+        .navbar {
+            background-color: hsl(122, 95%, 40%);
+            overflow: hidden;
+            display: flex;
+            padding: 1rem;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+        }
+        .navbar a:hover {
+            background-color: #45a049;
+            border-radius: 4px;
+        }
+        .container {
+        
+            padding: 1rem;
+            width:100vw;
+            height:100%;
+            background: linear-gradient(90deg,white 0%, #c4ff9a 50% , white 100%);
+            display:flex;
+            align-items: center;
+            flex-direction: column;
+            
+        }
+        .section {
+            margin: 1.5rem 0;
+            padding: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #d1ffb2;
+            transition:all linear 0.2s;
+            width:75%;
+        }
+        .section h2 {
+            margin: 0 0 1rem 0;
+            font-family: monospace;
+        }
+        #medical-suggestion, #medicine-search, #medicine-prescribed {
+            min-height: 150px;
+            padding: 1rem;
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .section:hover{
+            box-shadow:0 0 10px rgba(41, 40, 40, 0.457);
+            border: solid 2px rgb(33, 146, 33);
+            transform:scale(1.02);
+        }
+        textarea{
+            padding:2% 5%;
+        }
+        #but{
+            display:block;
+            background-color: #c8fda4;
+            border:solid 1px green;
+            border-radius: 5px;
+            box-shadow: 0 0 5px #ccc;
+            padding:10px 20px;
+            font-family: monospace;
+            transition: all linear 0.3s;
+            margin:0 auto;
+            margin-top: 1%;
+            
+        }
+        #but:hover{
+            background-color: rgb(0, 148, 15);
+            transform: scale(1.05);
+            color:white;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-group input, 
+        .form-group textarea, 
+        .form-group select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: all linear 0.1s;
+            font-family: monospace;
+        }
+        .form-group textarea:hover{
+            border:solid 3px green;
+        }
+
+        textarea {
+            resize: none;
+            height: 80px;
+        }
+
+        .form-group input[type="submit"] {
+            background-color: #0ffc17;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .form-group input[type="submit"]:hover {
+            background-color: #2baf32;
+        }
+
+        .form-group input:hover{
+            border: solid 2px rgb(0, 72, 0);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 16px;
+            color: #666;
+        }
+        .section {
+            margin-bottom: 30px;
+            transition: all linear 0.3s;
+            padding:2% 5%;
+        }
+        /* .section:hover{
+            background-color: #dbd9d9;
+            background: linear-gradient(90deg, white 0% , rgb(233, 232, 232) 25%,rgb(232, 232, 232) 75%,white 100%);
+            
+            transform: scale(1.01);
+        } */
+
+        .section h3 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            color: #fffefe;
+            /* border-bottom: 2px solid #4CAF50; */
+            border-radius: 5px;
+            padding-bottom: 5px;
+            padding-left:15px;
+            padding-top:5px;
+            background:linear-gradient(90deg , rgb(5, 143, 5) 0%,rgb(7, 176, 7) 50%, rgb(0, 91, 24) 100%);
+            text-shadow: 0 2px black;
+            
+        }
+        h4{
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            color: #fffefe;
+            /* border-bottom: 2px solid #4CAF50; */
+            border-radius: 5px;
+            padding-bottom: 5px;
+            padding-left:15px;
+            padding-top:5px;
+            background:linear-gradient(90deg , rgb(5, 143, 5) 0%,rgb(7, 176, 7) 50%, rgb(0, 91, 24) 100%);
+            text-shadow: 0 2px black;
+
+        }
+        #row{
+            display:flex;
+            flex-direction: row;
+            gap:25%;     
+        }
+        #qna
+        {
+            display:grid;
+            grid-template-columns: 2fr 1fr 1fr;
+        }
+        #ss_button{
+            background-color: #a9ff53;
+            border:solid 1px rgb(0, 59, 5);
+            max-width: 75%;
+            transition: all linear 0.1s;
+        }
+        #ss_button:hover{
+            background-color: #0863bd;
+            color:white;
+            border:solid 2px rgb(0, 39, 168);
+        }
+        #qna2{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+ @media (max-width: 768px) {
+    #patient-form{
+        width:100vw;
+        overflow:hidden;
+    }
+    #row{
+        display:flex;
+        /* flex-direction:row;
+        flex-wrap: wrap; */
+        flex-direction:column;
+    }
+    #qna{
+        display:flex;
+        flex-direction: column;
+    }
+    #qna2{
+        display:flex;
+        flex-direction: column;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+    <h1>MedVault</h1>
+    <nav>
+        <a href="./dashboard.html">Home</a>
+        <a href="./medical-records2.html" >Medical Records</a>
+        <a href="./analytics.html">Analytics</a>
+        <a href="./contacts.html">Contacts</a>
+    </nav>
+    </header>
+    <div class="container">
+        <div class="section" id="basic-details">
+            <h3>1. Basic Details</h3>
+
+            <div class="form-group" id="row">
+                <div class="form-group">
+                    <label for="case_no">Case Number :</label>
+                    <input type="text" id = "case_no" value = "">
+                    <button id="ag" >GET DETAILS</button>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Date :</label>
+                    <input type="text" id = "date" >
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" readonly>
+            </div>
+
+            <div  id="row">
+                <div class="form-group">
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" readonly >
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Gender :</label>
+                    <input type="text" id="gender" name="gender" readonly>
+                </div> 
+            </div>
+
+            <div class="form-group">
+                <label for="blood-group">Blood Group:</label>
+                <input type="text" id = "blood-group" value = "" readonly>
+            </div>
+
+            <div id="row">
+                <div class="form-group">
+                    <label for="contact">Contact Number:</label>
+                    <input type="tel" id="contact" name="contact" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="opt_contact">Optional Contact Number:</label>
+                    <input type="tel" id="opt_contact" name="opt_contact" readonly>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email ID</label>
+                <input type="email" id = "email" required readonly>
+            </div>
+
+            <div class="form-group col-md-4">
+                <label for="inputState">State</label>
+                <input type="text" value = "" id = "state" readonly>
+            </div>
+            
+
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <textarea name="address" id="address" placeholder="Enter Address" readonly></textarea>
+            </div>
+        
+        <!-- 2.1 HOMOEOPATHIC GENERALITIES -->
+        
+        <br></br>
+            <h3>2. HOMOEOPATHIC GENERALITIES</h3>
+            
+            <div>
+                
+                    <summary></summary>
+                    <div class="form-group" id = "qna2">
+                        <label for="temp" style="align-self: center;" >1. How do you feel the temperature around : </label>
+                        <input type="text" value = "" id = "temp" readonly>
+                    </div>
+
+                    <div class="form-group" id = "qna2">
+                        <label for="sucp" style="align-self: center;">2. Tendency to Catch Cold : </label>
+                        <input type="text" id="sucp" value = "" readonly>
+                    </div>
+
+                    <div class="form-group" id = "qna2">
+                        <label for="appr" style="align-self: center;">3. Appearance : </label>
+                        <input type="text" id = "appr" value = "" readonly>
+                    </div>
+
+                    <div class="form-group" id = "qna2">
+                        <label for="appetite" style="align-self: center;">4. Appetite : </label>
+                        <input type="text" id = "appetite" value = "" readonly>
+                    </div>
+                    <div class="form-group" id = "qna2">
+                        <label for="d_taste" style="align-self: center;">5. Desired Taste : </label>
+                        <input type="text" id = "d_taste" value="" readonly>
+                    </div>
+                    <div class="form-group" id = "qna2">
+                        <label for="a_food" style="align-self: center;">6. Food Aversion  : </label>
+                        <input type="text" id = "a_food" value = "" readonly>
+                    </div>
+                    <div class="form-group" id = "qna2">
+                        <label for="intol" style="align-self: center;">7. Intolerance : </label>
+                        <input type="text" id = "intol" value="" readonly>
+                    </div>
+                    <div class="form-group" id = "qna2">
+                        <label for="Pers" style="align-self: center;">8. Sweat : </label>
+                        <input type="text" id = "Pers" readonly>
+                    </div>
+                    <div class="form-group" id = "qna2">
+                        <label for="tongue" style="align-self: center;">9.Tongue : </label>
+                        <input type="text" id = "tongue" readonly>
+                    </div>
+                    <div class="form-group" id = "qna2">
+                        <label for="thirst" style="align-self: center;">10. Thirst : </label>
+                        <input type="text" id = "thirst" readonly>
+                    </div>
+            </div>
+
+            <!-- Section 4: General Survey -->
+            
+            
+                <h3>3. General Survey</h3>
+
+                <div id="row" style="justify-content: space-evenly;">
+                    <div class="form-group">
+                        <label for="height">Height (cm):</label>
+                        <input type="text" id="height" name="height" readonly >
+                    </div>
+                    <div class="form-group">
+                        <label for="weight">Weight (kg):</label>
+                        <input type="text" id="weight" name="weight" readonly >
+                    </div>
+                </div>
+
+                <div id="row" style="justify-content: space-evenly;">
+                    <div class="form-group">
+                        <label for="bp">Blood Pressure (mmHg):</label>
+                        <input type="text" id="bp" name="bp" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="pulse">Pulse (per min):</label>
+                        <input type="text" id="pulse" name="pulse" readonly>
+                    </div>
+                </div>
+
+                <div id="row" style="justify-content: space-evenly;">
+                    <div class="form-group">
+                        <label for="sp">SPO<sub>2</sub> : </label>
+                        <input type="text" id="sp" name="sp" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="sugar">Sugar Level (mg/dL):</label>
+                        <input type="text" id="sugar" name="sugar" readonly >
+                    </div>
+                </div>
+                </br>
+                <div class="form-group" id="qna">
+                    <label for="db"> Are you Diabetic ? </label>
+                    <label class = "radio" id = "gr" >
+                        <input type = "radio" name = "db_ans" id = "db_y">Yes
+                    </label>
+                    <label class = "radio" id = "gr">
+                        <input type = "radio" name = "db_ans" id = "db_n">No
+                    </label>
+                </div>
+                
+                <div class="form-group" id="qna">
+                    <label for="ins"> Do you take Insulin ? </label>
+                    <label class = "radio" id = "gr" >
+                        <input type = "radio" name = "ins_ans" id = "ins_y">Yes
+                    </label>
+                    <label class = "radio" id = "gr">
+                        <input type = "radio" name = "ins_ans" id = "ins_n">No
+                    </label>
+                </div>
+
+                <div class="form-group" id="qna">
+                    <label for="ane"> Do you have Anaemia ? </label>
+                    <label class = "radio" id = "gr">
+                        <input type = "radio" name = "ane_ans" id = "ane_y">Yes
+                    </label>
+                    <label class = "radio" id = "gr">
+                        <input type = "radio" name = "ane_ans" id = "ane_n">No
+                    </label>
+                </div>
+
+                <div class="form-group" id="qna">
+                    <label for="h_dis"> Do you have Heart Disease ? </label>
+                    <label class = "radio" id = "gr">
+                        <input type = "radio" name = "h_dis_ans" id = "h_dis_y">Yes
+                    </label>
+                    <label class = "radio" id = "gr">
+                        <input type = "radio" name = "h_dis_ans" id = "h_dis_n">No
+                    </label>
+                </div>
+
+                <div class="form-group" id="qna">
+                    <label for="smoke"> Do you Smoke ? </label>
+                    <label class = "radio" id = "gr">
+                        <input type = "radio" name = "smoke_ans" id = "smoke_y">Yes
+                    </label>
+                    <label class = "radio" id = "gr">
+                        <input type = "radio" name = "smoke_ans" id = "smoke_n">No
+                    </label>
+                </div>
+
+                <div class="form-group" id="qna">
+                    <label for="alc"> Do you consume Alcohol ? </label>
+                    <label class = "radio" id = "gr">
+                        <input type = "radio" name = "alc_ans" id = "alc_y">Yes
+                    </label>
+                    <label class = "radio" id = "gr">
+                        <input type = "radio" name = "alc_ans" id = "alc_n">No
+                    </label>
+                </div>
+
+                <div class="form-group" id="qna">
+                    <label for="ment"> Do you have Depression/Mental Issues ? </label>
+                    <label class = "radio" id = "gr">
+                        <input type = "radio" name = "ment_ans" id = "ment_y">Yes
+                    </label>
+                    <label class = "radio" id = "gr">
+                        <input type = "radio" name = "ment_ans" id = "ment_n">No
+                    </label>
+                </div>  
+                
+                <!-- Section 2: Main Medical Problem -->
+            <br></br>
+                <h3>4. Previous Medical Problem</h3>
+
+                <div id = "medical-problems">
+
+                </div>
+            </div>
+        
+        
+
+        <!-- Section 2: Main Medical Problem -->
+        
+        <div class="section" id="medical-problem" style = "margin-top:10%;">
+            <h3>Current Medical Problem</h3>
+    
+            <div class="form-group">
+                <label for="problem">Describe your main medical problem:</label>
+                <textarea id="problem" name="problem" ></textarea>
+            </div>
+    
+            <div class="form-group">
+                <label for="category">Category of Problem : </label>
+                <div style = "display:grid; grid-template-columns: 2fr 1fr; column-gap:10%;">
+                    <input type="text" id = "category" value = "">
+                    <input type="button" value = "Smart-Search" id="ss_button">
+                </div> 
+            </div>
+    
+    
+            <div id="row" style="justify-content: start;"> 
+                <div class="form-group">
+                    <label for="tspan">For How long has this problem been persisting? </label>
+                    <input type="tspan" id = "tspan" value = "">
+                </div>
+            </div>
+    
+        </br></br>
+            <div class="form-group" id="qna">
+                <label for="consult"> Have You consulted anywhere before ? </label>
+                <label class = "radio" id = "gr">
+                    <input type = "radio" name = "consult_ans" id = "consult_y">Yes
+                </label>
+                <label class = "radio" id = "gr">
+                    <input type = "radio" name = "consult_ans" id = "consult_n">No
+                </label>
+            </div>
+    
+    
+            
+                <div class="form-group" >
+                    <label for="prm">Prior Medication:</label>
+                    <textarea id="prm" name="prm" ></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="feedback">Feedback:</label>
+                    <input type="text" id="fdbk" name="fdbk">
+                </div>
+            
+        </div>
+        
+
+
+        <div class="section">
+            <h2>Medical Suggestion</h2>
+            <div id="medical-suggestion">
+                <!-- Medicinal suggestions data will be displayed here -->
+            </div>
+        </div>
+
+        <!-- <div class="section">
+            <h2>Medicine Search</h2>
+            <div id="medicine-search">
+                
+            </div>
+        </div> -->
+
+        <div class="section">
+            <h2>Medicine Prescribed</h2>
+            <form  id="presc">
+                <div id="medicine-prescribed">
+                    <label for="caseno">enter casenumber here:</label>
+                    <input type="text" id = "caseno">
+                    <input type="date" id = "toDate" style = "margin-left: 10%;">
+                    <textarea name="med_presc" id="med_presc" placeholder="enter your prescribed medicine here" rows = "15" cols = "80"></textarea>
+                    <button type  = "submit" name = "submit" id="but">STORE IN RECORDS</button>
+                </div>
+            </form>
+            <button type  = "submit" name = "submit" id="but" onclick = "pres_page()">GO TO PRESCRIPTION</button>
+        </div>
+
+    </div>
+
+    <footer>
+        © 2025 MedVault. All rights reserved.
+    </footer>
+    <script>
+        function pres_page(){
+            alert("Going to Prescription page");
+            window.location.href = "prescription.html";
+        }
+
+    </script>
+
+    <script type="module">
+        // Import Firebase SDK
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
+        import { getFirestore, doc, getDoc, updateDoc } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js";
+    
+        // Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyC5JLvPzsgav5U5dv3eLy511WodcTwCxk8",
+            authDomain: "medvault-3ab45.firebaseapp.com",
+            projectId: "medvault-3ab45",
+            storageBucket: "medvault-3ab45.appspot.com",
+            messagingSenderId: "769455123364",
+            appId: "1:769455123364:web:640ec301531a298779af31"
+        };
+    
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        var caseNumber = document.getElementById("case_no").value.trim();
+        
+        const fetchPatientData = async () => {
+        const caseNo = document.getElementById("case_no").value.trim(); // Get the entered case number
+
+        if (!caseNo) {
+            alert("Please enter a valid Case Number.");
+            return;
+        }
+
+        try {
+            // Reference to the document in Firestore
+            const docRef = doc(db, "trial2", caseNo);
+            const docSnap = await getDoc(docRef);
+
+            if (docSnap.exists()) {
+                const data = docSnap.data(); // Get document data
+
+                // Populate form fields with fetched data
+                document.getElementById("name").value = data.basicDetails.name || "no data found";
+                document.getElementById("age").value = data.basicDetails.age || "no data found";
+                document.getElementById("date").value = data.date || "no data found";
+                document.getElementById("gender").value = data.basicDetails.gender || "no data found";
+                document.getElementById("blood-group").value = data.basicDetails.bloodGroup || "no data found";
+                document.getElementById("contact").value = data.basicDetails.contact || "no data found";
+                document.getElementById("opt_contact").value = data.basicDetails.opt_contact || "no data found";
+                document.getElementById("email").value = data.basicDetails.email || "no data found";
+                document.getElementById("state").value = data.basicDetails.state || "no data found";
+                document.getElementById("address").value = data.basicDetails.address || "no data found";
+
+                const gen = data.generalSurvey;
+                document.getElementById("height").value  = gen.height || "no data found";
+                document.getElementById("weight").value  = gen.weight || "no data found";
+                document.getElementById("bp").value  = gen.bloodPressure || "no data found";
+                document.getElementById("pulse").value  = gen.spO2 || "no data found";
+                document.getElementById("sp").value  = gen.pulse || "no data found";
+                document.getElementById("sugar").value  = gen.sugarLevel || "no data found";
+                // Example of setting radio buttons based on fetched data
+                if (gen.diabetic === "Yes") {
+                    document.getElementById("db_y").checked = true; // Select 'Yes'
+                } else  {
+                    document.getElementById("db_n").checked = true; // Select 'No'
+                }
+                // Example of setting radio buttons based on fetched data
+                if (gen.insulin === "Yes") {
+                    document.getElementById("ins_y").checked = true; // Select 'Yes'
+                } else {
+                    document.getElementById("ins_n").checked = true; // Select 'No'
+                }
+                // Example of setting radio buttons based on fetched data
+                if (gen.anemia === "Yes") {
+                    document.getElementById("ane_y").checked = true; // Select 'Yes'
+                } else{
+                    document.getElementById("ane_n").checked = true; // Select 'No'
+                }
+                // Example of setting radio buttons based on fetched data
+                if (gen.heartDisease === "Yes") {
+                    document.getElementById("h_dis_y").checked = true; // Select 'Yes'
+                } else {
+                    document.getElementById("h_dis_n").checked = true; // Select 'No'
+                }
+                // Example of setting radio buttons based on fetched data
+                if (gen.smoke === "Yes") {
+                    document.getElementById("smoke_y").checked = true; // Select 'Yes'
+                } else {
+                    document.getElementById("smoke_n").checked = true; // Select 'No'
+                }
+                // Example of setting radio buttons based on fetched data
+                if (gen.alcohol === "Yes") {
+                    document.getElementById("alc_y").checked = true; // Select 'Yes'
+                } else {
+                    document.getElementById("alc_n").checked = true; // Select 'No'
+                }
+                // Example of setting radio buttons based on fetched data
+                if (gen.mentalIssuees === "Yes") {
+                    document.getElementById("ment_y").checked = true; // Select 'Yes'
+                } else  {
+                    document.getElementById("ment_n").checked = true; // Select 'No'
+                }
+
+
+
+                const hom = data.homoeopathicGeneralities;
+                document.getElementById("temp").value = hom.temperaturePreferance || "no data found";
+                document.getElementById("sucp").value = hom.coldTendency || "no data found";
+                document.getElementById("appr").value = hom.appearance || "no data found";
+                document.getElementById("appetite").value = hom.appetite || "no data found";
+                document.getElementById("d_taste").value = hom.desiredTaste || "no data found";
+                document.getElementById("a_food").value = hom.FoodAversion || "no data found";
+                document.getElementById("intol").value = hom.Intolerance || "no data found";
+                document.getElementById("Pers").value = hom.Sweat || "no data found";
+                document.getElementById("tongue").value = hom.Tongue || "no data found";
+                document.getElementById("thirst").value = hom.Thirst || "no data found";
+
+
+                if (data.medicalProblem) {
+                    const medicalProblem = data.medicalProblem;
+
+                    // Get the div to display results
+                    const displayDiv = document.getElementById("medical-problems");
+                    // displayDiv.innerHTML = "<h2>Medical Problems</h2>";
+
+                    // Iterate over all case numbers
+                    for (const caseNumber in medicalProblem) {
+                    const description = medicalProblem[caseNumber]?.description || "No description available";
+                    const category = medicalProblem[caseNumber]?.category || "No data found";
+                    const duration = medicalProblem[caseNumber]?.duration || "No data found";
+                    const prior = medicalProblem[caseNumber]?.prior || "No data found";
+                    const medi = medicalProblem[caseNumber]?.priorMedication || "No data found";
+                    const fdb = medicalProblem[caseNumber]?.feedback || "No data found";
+
+                    // Create a section for each case
+                    const caseSection = document.createElement("div");
+                    caseSection.style.border = "1px solid #ccc";
+                    caseSection.style.margin = "10px";
+                    caseSection.style.padding = "10px";
+                    caseSection.style.borderRadius = "5px";
+                    caseSection.style.fontFamily = "monospace";
+                    
+
+                    // Add the case number and description
+                    caseSection.innerHTML = `
+                    
+                        <h4>${caseNumber}</h4>
+                        <p>description : ${description} </br>
+                            category : ${category} </br>
+                            duration : ${duration} </br>
+                            prior consultation? : ${prior} </br>
+                            prior medication : ${medi} </br>
+                            feedback : ${fdb} </p>
+                 
+                    `;
+
+                    // Append the case section to the displayDiv
+                    displayDiv.appendChild(caseSection);
+                    }
+                } else {
+                    console.log("No medical problems found in the document.");
+                }
+
+                alert("Data fetched successfully!");
+            } else {
+                alert("No document found with the given Case Number.");
+            }
+        } catch (error) {
+            console.error("Error fetching data:", error);
+            alert("Error fetching data. Please try again.");
+            alert(error);
+        }
+    };
+
+
+    // Handle form submission
+    document.getElementById("presc").addEventListener("submit", async (event) => {
+            event.preventDefault(); // Prevent default form submission
+            var caseNumber  = document.getElementById("case_no").value.trim();
+            const d = document.getElementById("toDate").value.trim();
+            const caseKey = String(`case${d}`);
+
+            const medprb = {
+                    description: document.getElementById("problem").value || "not mentioned",
+                    category: document.getElementById("category").value || "not mentioned" ,
+                    duration: document.getElementById("tspan").value || "not mentioned",
+                    prior: document.querySelector('input[name="consult_ans"]:checked')?.nextSibling.textContent.trim() || "No",
+                    priorMedication: document.getElementById("prm").value || "No Medication before",
+                    feedback: document.getElementById("fdbk").value || "No Medication before",
+                };
+            // Get the value from the textarea
+            const prescribedMedicine = document.getElementById("med_presc").value.trim();
+    
+            if (!prescribedMedicine) {
+                alert("Please enter the prescribed medicine.");
+                return;
+            }
+    
+            try {
+                // If caseNumber is not found, fetch it from user
+                if (!caseNumber) {
+                    alert("Case number could not be fetched.Enter it manually");
+                    caseNumber = document.getElementById("case_no").value.trim();
+                    return;
+                }
+    
+                // Reference to the Firestore document
+                const caseDocRef = doc(db, "trial2", caseNumber);
+    
+                // Check if the document exists
+                const caseDocSnap = await getDoc(caseDocRef);
+                if (!caseDocSnap.exists()) {
+                    alert(`Document with CaseNumber "${caseNumber}" was not found in the database.\n Enter it manually`);
+                    caseNumber = document.getElementById("caseno").value.trim();
+                    return;
+                }
+
+                
+                
+                // Update the document
+                alert("Updating the document...");
+                // const updateData = caseKey
+                //     ? { [caseKey]: { prescribedMedicine } }
+                //     : { prescribedMedicine };
+    
+                // await updateDoc(caseDocRef, {
+                //     medicalProblem : updateData});
+                await updateDoc(caseDocRef, {
+                [`prescribedMedicine.${caseKey}`]: prescribedMedicine // Dynamically add the caseKey and its subfields
+                });
+
+                await updateDoc(caseDocRef,{
+                [`medicalProblem.${caseKey}`]: medprb
+                });
+    
+                alert(`Data data has been successfully stored to ${caseNumber} `);
+            } catch (error) {
+                console.error("Error updating Firestore document:", error);
+                alert("An error occurred while storing the data. Please try again.");
+                alert(error);
+            }
+        });
+
+    document.getElementById("ag").addEventListener("click", fetchPatientData);
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Firestore Data</title>
+    <link href="detail.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="form-view.css" rel="stylesheet">
+    <script type="module">
+        // Import Firebase modules
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-app.js";
+        import { getFirestore, collection, query, where, getDocs} from "https://www.gstatic.com/firebasejs/9.17.2/firebase-firestore.js";
+
+        // Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyC5JLvPzsgav5U5dv3eLy511WodcTwCxk8",
+            authDomain: "medvault-3ab45.firebaseapp.com",
+            projectId: "medvault-3ab45",
+            storageBucket: "medvault-3ab45.firebasestorage.app",
+            messagingSenderId: "769455123364",
+            appId: "1:769455123364:web:640ec301531a298779af31",
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        // Fetch Firestore data
+        const fetchFirestoreData = async () => {
+            try {
+                const trial2Ref = collection(db, "trial2");
+                const querySnapshot = await getDocs(trial2Ref);
+
+                // Process and display data
+                let html = '<h2>Patient Details:</h2><ul>';
+                querySnapshot.forEach((doc) => {
+                    const data = doc.data();
+                    const details = data.basicDetails;
+
+                    html += `
+                    <div id="patient-details">
+                        <li>
+                            <strong>Case No.:</strong> ${data.caseNumber}<br>
+                            <strong>Name:</strong> ${details.name}<br>
+                            <strong>Age:</strong> ${details.age}<br>
+                            <strong>Blood Group:</strong> ${details.bloodGroup}<br>
+                            <strong>Contact:</strong> ${details.contact}<br>
+                            <strong>Email:</strong> ${details.email}<br>
+                            <strong>Address:</strong> ${details.address}<br>
+                            <strong>State:</strong> ${details.state}<br>
+                            <strong>Date:</strong> ${data.date}<br>
+                        </li>
+                        </div>
+                        <hr>
+                        
+                    `;
+                });
+                html += '</ul>';
+                document.getElementById("data").innerHTML = html;
+            } catch (error) {
+                console.error("Error fetching Firestore data:", error);
+                document.getElementById("data").textContent = "Error fetching data.";
+            }
+        };
+
+        // Fetch data when the script loads
+        fetchFirestoreData();
+
+
+
+        // Function to fetch and display patient details
+async function fetchPatientDetails(caseNumber) {
+    try {
+        const patientQuery = query(collection(db, "trial2"), where("caseNumber", "==", caseNumber));
+        const querySnapshot = await getDocs(patientQuery);
+
+        const detailsContainer = document.getElementById("patientDetails");
+        detailsContainer.innerHTML = "";
+
+        if (querySnapshot.empty) {
+            detailsContainer.innerHTML = `<p class="text-danger">No patient found with Case Number: ${caseNumber}</p>`;
+           
+            return;
+        }
+
+        querySnapshot.forEach(doc => {
+            const data = doc.data();
+            detailsContainer.innerHTML = `
+               <h3>Patient Details</h3>
+    <p><strong>Name:</strong> ${data.basicDetails.name || "Not specified"}</p>
+    <p><strong>Age:</strong> ${data.basicDetails.age || "Not specified"}</p>
+    <p><strong>Gender:</strong> ${data.basicDetails.gender || "Not specified"}</p>
+    <p><strong>Contact:</strong> ${data.basicDetails.contact || "Not specified"}</p>
+    <p><strong>Address:</strong> ${data.basicDetails.address || "Not specified"}</p>
+    <p><strong>State:</strong> ${data.basicDetails.state || "Not specified"}</p>
+    <p><strong>Blood Group:</strong> ${data.basicDetails.bloodGroup || "Not specified"}</p>
+    <p><strong>Optional Contact:</strong> ${data.basicDetails.opt_contact || "Not specified"}</p>
+    <h4>Case Details</h4>
+    <p><strong>Case Number:</strong> ${data.basicDetails?.caseNumber || "Not specified"}</p>
+    <p><strong>Prescribed Medicine:</strong> ${data.case?.prescribedMedicine || "Not specified"}</p>
+    <p><strong>Date:</strong> ${data.case?.date || "Not specified"}</p>
+    <h4>General Survey</h4>
+    <p><strong>Alcohol:</strong> ${data.generalSurvey?.alcohol || "Not specified"}</p>
+    <p><strong>Anemia:</strong> ${data.generalSurvey?.anemia || "Not specified"}</p>
+    <p><strong>Blood Pressure:</strong> ${data.generalSurvey?.bloodPressure || "Not specified"}</p>
+    <p><strong>Diabetic:</strong> ${data.generalSurvey?.diabetic || "Not specified"}</p>
+    <p><strong>Heart Disease:</strong> ${data.generalSurvey?.heartDisease || "Not specified"}</p>
+    <p><strong>Height:</strong> ${data.generalSurvey?.height || "Not specified"} cm</p>
+    <p><strong>Insulin:</strong> ${data.generalSurvey?.insulin || "Not specified"}</p>
+    <p><strong>Mental Issues:</strong> ${data.generalSurvey?.mentalIssues || "Not specified"}</p>
+    <p><strong>Pulse:</strong> ${data.generalSurvey?.pulse || "Not specified"} bpm</p>
+    <p><strong>Smoking:</strong> ${data.generalSurvey?.smoke || "Not specified"}</p>
+    <p><strong>SpO2:</strong> ${data.generalSurvey?.spO2 || "Not specified"}%</p>
+    <p><strong>Sugar Level:</strong> ${data.generalSurvey?.sugarLevel || "Not specified"} mg/dL</p>
+    <p><strong>Weight:</strong> ${data.generalSurvey?.weight || "Not specified"} kg</p>
+    <h4>Homoeopathic Generalities</h4>
+    <p><strong>Food Aversion:</strong> ${data.homoeopathicGeneralities?.FoodAversion || "Not specified"}</p>
+    <p><strong>Intolerance:</strong> ${data.homoeopathicGeneralities?.Intolerance || "Not specified"}</p>
+    <p><strong>Sweat:</strong> ${data.homoeopathicGeneralities?.Sweat || "Not specified"}</p>
+    <p><strong>Thirst:</strong> ${data.homoeopathicGeneralities?.Thirst || "Not specified"}</p>
+    <p><strong>Tongue:</strong> ${data.homoeopathicGeneralities?.Tongue || "Not specified"}</p>
+    <p><strong>Appearance:</strong> ${data.homoeopathicGeneralities?.appearance || "Not specified"}</p>
+    <p><strong>Appetite:</strong> ${data.homoeopathicGeneralities?.appetite || "Not specified"}</p>
+    <p><strong>Cold Tendency:</strong> ${data.homoeopathicGeneralities?.coldTendency || "Not specified"}</p>
+    <p><strong>Desired Taste:</strong> ${data.homoeopathicGeneralities?.desiredTaste || "Not specified"}</p>
+    <p><strong>Temperature Preference:</strong> ${data.homoeopathicGeneralities?.temperaturePreference || "Not specified"}</p>
+    <h4>Medical Problem</h4>
+    <p><strong>Description:</strong> ${data.medicalProblem?.description || "Not specified"}</p>
+    <p><strong>Duration:</strong> ${data.medicalProblem?.duration || "Not specified"}</p>
+    <p><strong>Feedback:</strong> ${data.medicalProblem?.feedback || "Not specified"}</p>
+   
+`;
+
+        });
+    } catch (error) {
+        console.error("Error fetching patient details:", error);
+    }
+}
+
+// Event listener for form submission
+document.getElementById("searchForm").addEventListener("submit", (event) => {
+    event.preventDefault();
+    const caseNumber = document.getElementById("caseNumberInput").value.trim();
+    if (caseNumber) {
+        fetchPatientDetails(caseNumber);
+    } else {
+        alert("Please enter a valid Case Number.");
+    }
+});
+
+    </script>
+</head>
+<body>
+    
+    
+    <header>
+        <h1>MedVault</h1>
+        <nav>
+            <a href="./dashboard.html">Home</a>
+            <a href="./medical-records2.html" >Medical Records</a>
+            <a href="./analytics.html">Analytics</a>
+            <a href="./contacts.html">Contacts</a>
+        </nav>
+    </header>
+
+
+    <div class="container mt-5">
+        <h1>Search Patient Details</h1>
+        <form id="searchForm">
+            <div class="mb-3">
+                <label for="caseNumberInput" class="form-label">Enter Case Number:</label>
+                <input type="text" id="caseNumberInput" class="form-control" placeholder="e.g., AA0001">
+            </div>
+            <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+</div>
+
+
+<div id="patientDetails" class="mt-5">
+    <!-- Patient details will be rendered here -->
+</div>
+
+
+    <div id="data" class="patient-data-container"></div>
+
+
+
+    <footer>
+        &copy; 2025 MedVault. All rights reserved.
+    </footer>
+
+   <script src="https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.11/firebase-firestore.js"></script>
+    <script type="module" src="./form-view.js"></script>
+</body>
+
+</html>
+
+
+

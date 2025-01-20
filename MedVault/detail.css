@@ -1,0 +1,163 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f8fb;
+    min-height: 100vh;
+display: flex;
+flex-direction: column;
+}
+
+header {
+background-color: #28a745;
+color: white;
+padding: 10px 20px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+width:100vw;
+flex-wrap: wrap;
+}
+header nav a {
+color: white;
+text-decoration: none;
+margin: 0 10px;
+font-size: 16px;
+}
+header nav a:hover {
+text-decoration: underline;
+}
+
+footer {
+text-align: center;
+padding: 20px;
+color: #f1f1f1;
+margin-top: auto;
+background: #28a745;
+width: 100%; 
+box-sizing: border-box;
+position: relative; 
+}
+#description{
+font-family:" Helvetica, Arial, Georgia, Tahoma , Roboto"; 
+}
+
+
+/* Container for the entire patient data section */
+.patient-data-container {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading styling */
+.patient-data-container h2 {
+    color: #4CAF50;
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Style for each patient card */
+#patient-details {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for list items */
+#patient-details li {
+    list-style: none; /* Remove bullets */
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Key-value styling */
+#patient-details strong {
+    color: #333;
+    font-weight: bold;
+}
+
+/* Divider styling */
+hr {
+    border: none;
+    height: 1px;
+    background-color: #ddd;
+    margin: 15px 0;
+}
+
+/* Center Alignment for the Patient Details Container */
+#patientDetails {
+   /* Hide the div by default */
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 700px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    text-align: left;
+}
+
+/* Heading Styling */
+#patientDetails h3, #patientDetails h4 {
+    color: #28a745;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    text-align: center; /* Center-align the headings */
+}
+
+/* Paragraph Styling */
+#patientDetails p {
+    font-size: 16px;
+    color: #555;
+    margin: 8px 0;
+    line-height: 1.6;
+}
+
+/* Highlight Key Information */
+#patientDetails p strong {
+    color: #333;
+}
+
+/* Section Dividers */
+#patientDetails hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 15px 0;
+}
+
+/* Hover Effect */
+#patientDetails:hover {
+    transform: scale(1.02);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #patientDetails {
+        padding: 15px;
+        width: 90%; /* Adjust width for smaller screens */
+    }
+
+    #patientDetails p {
+        font-size: 14px;
+    }
+    header nav{
+        margin:0 auto;
+    }
+    header h1{
+       
+        margin: 0 auto;
+    }
+}

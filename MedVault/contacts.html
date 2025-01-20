@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - MedVault</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f0fdf4;
+            color: #28a745;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 16px;
+        }
+        header nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 1rem;
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            flex-grow: 1;
+        }
+
+        .profile-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+            padding: 2rem 1.5rem;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .profile-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        .profile-card img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            margin-bottom: 1.5rem;
+            border: 4px solid #198754;
+        }
+
+        .profile-card h3 {
+            margin: 0.5rem 0;
+            font-size: 1.5rem;
+            color: #198754;
+            font-weight: bold;
+        }
+
+        .profile-card .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .profile-card .social-links a {
+            color: #198754;
+            text-decoration: none;
+            font-size: 1.8rem;
+            transition: color 0.3s ease;
+        }
+
+        .profile-card .social-links a:hover {
+            color: #28a745;
+        }
+
+        footer {
+            background-color: #28a745;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            font-size: 1rem;
+            font-weight: 500;
+            margin-top: auto;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <header>
+        <h1>MedVault</h1>
+        <nav>
+            <a href="./dashboard.html">Home</a>
+            <a href="./medical-records2.html" >Medical Records</a>
+            <a href="./analytics.html">Analytics</a>
+            <a href="./contacts.html">Contacts</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Profile 1 -->
+        <div class="profile-card">
+            <img src="./contacts_img/soumyadeep.png" alt="Profile Photo">
+            <h3>Soumyadeep Dutta</h3>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/soumyadeep-dutta-221b06292/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/simple_soumyadeep/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:btech10418@bitmesra.ac.in" title="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+
+        <!-- Profile 2 -->
+        <div class="profile-card">
+            <img src="./contacts_img/mayank.jpg" alt="Profile Photo">
+            <h3>Mayank Sengar</h3>
+            <div class="social-links">
+                <a href= "https://www.linkedin.com/in/mayank-sengar-153849281/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/_mayanksengar_/"  target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:btech10111@bitmesra.ac.in" title="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+
+        <!-- Profile 3 -->
+        <div class="profile-card">
+            <img src="./contacts_img/abhineet.png" alt="Profile Photo">
+            <h3>Abhineet Anand</h3>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/abhineet-anand-17403a279/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:personthree@example.com" title="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 MedVault. All rights reserved.
+    </footer>
+</body>
+</html>

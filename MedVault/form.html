@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Information Form</title>
+    <link rel="stylesheet" href="form_style.css">
+    <script src = "form.js"></script>
+    
+     
+</head>
+<body>
+    <!-- <script type="module" src="form.js"></script> -->
+     
+    <header>
+        <h1>MedVault</h1>
+        <nav>
+            <a href="./dashboard.html">Home</a>
+            <a href="./medical-records2.html" >Medical Records</a>
+            <a href="./analytics.html">Analytics</a>
+            <a href="./contacts.html">Contacts</a>
+        </nav>
+    </header>
+    <div class="header">
+        <h1>Medical Information Form</h1>
+        <p>Please fill in the details accurately to help us serve you better.</p>
+    </div>
+
+    <div class="navbar">
+        <a href="#basic-details">Basic Details</a>
+        <a href="#medical-problem">Main Medical Problem</a>
+        <a href="#hom_gen">Homoeopathic Generalities</a>
+        <!-- <a href="#medical-history">Prior Medical History</a> -->
+        <a href="#general-survey">General Survey</a>
+    </div>
+    <form id="patient-form">
+        <div class="container">
+            <!-- <h2>Patient Medical Information Form</h2> -->
+
+            <!-- Section 1: Basic Details -->
+            <div class="section" id="basic-details">
+                <h3>1. Basic Details</h3>
+
+                <div class="form-group" id="row">
+                    <div class="form-group">
+                        <label for="case_no">Case Number :</label>
+                        <input type="text" id = "case_no" value = "">
+                        <button id="ag" >Auto-generate</button>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="date">Date :</label>
+                        <input type="date" id = "date">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div  id="row">
+                    <div class="form-group">
+                        <label for="age">Age:</label>
+                        <input type="number" id="age" name="age" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="age">Gender:</label>
+                        <div id="row" style = "width:300px;margin:0 auto;padding:2% 5%; border: solid 1px rgb(206, 206, 206);border-radius: 10px;background-color: white;">
+                        <label class = "radio" >
+                            <input type = "radio" name = "ans" id = "gr">Male
+                        </label>
+                        <label class = "radio">
+                            <input type = "radio" name = "ans" id = "gr">Female
+                        </label>
+                        <label class = "radio">
+                            <input type = "radio" name = "ans" id = "gr">Others
+                        </label>
+                        </div>
+                    </div> 
+                </div>
+
+                <div class="form-group">
+                    <label for="blood-group">Blood Group:</label>
+                    <select id="blood-group" name="blood-group" required>
+                        <option value="">Select</option>
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                    </select>
+                </div>
+
+                <div id="row">
+                    <div class="form-group">
+                        <label for="contact">Contact Number:</label>
+                        <input type="tel" id="contact" name="contact" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="opt_contact">Optional Contact Number:</label>
+                        <input type="tel" id="opt_contact" name="opt_contact">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email ID</label>
+                    <input type="email" id = "email" required>
+                </div>
+
+                <div class="form-group col-md-4">
+                    <label for="inputState">State</label>
+                    <select class="form-control" id="inputState" rows = "5" >
+                        <option value="SelectState">Select State</option>
+                        <option value="Andra Pradesh">Andra Pradesh</option>
+                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                        <option value="Assam">Assam</option>
+                        <option value="Bihar">Bihar</option>
+                        <option value="Chhattisgarh">Chhattisgarh</option>
+                        <option value="Goa">Goa</option>
+                        <option value="Gujarat">Gujarat</option>
+                        <option value="Haryana">Haryana</option>
+                        <option value="Himachal Pradesh">Himachal Pradesh</option>
+                        <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                        <option value="Jharkhand">Jharkhand</option>
+                        <option value="Karnataka">Karnataka</option>
+                        <option value="Kerala">Kerala</option>
+                        <option value="Madya Pradesh">Madya Pradesh</option>
+                        <option value="Maharashtra">Maharashtra</option>
+                        <option value="Manipur">Manipur</option>
+                        <option value="Meghalaya">Meghalaya</option>
+                        <option value="Mizoram">Mizoram</option>
+                        <option value="Nagaland">Nagaland</option>
+                        <option value="Orissa">Orissa</option>
+                        <option value="Punjab">Punjab</option>
+                        <option value="Rajasthan">Rajasthan</option>
+                        <option value="Sikkim">Sikkim</option>
+                        <option value="Tamil Nadu">Tamil Nadu</option>
+                        <option value="Telangana">Telangana</option>
+                        <option value="Tripura">Tripura</option>
+                        <option value="Uttaranchal">Uttaranchal</option>
+                        <option value="Uttar Pradesh">Uttar Pradesh</option>
+                        <option value="West Bengal">West Bengal</option>
+                        <option disabled style="background-color:#aaa; color:#fff">UNION Territories</option>
+                        <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                        <option value="Chandigarh">Chandigarh</option>
+                        <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                        <option value="Daman and Diu">Daman and Diu</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Lakshadeep">Lakshadeep</option>
+                        <option value="Pondicherry">Pondicherry</option>
+                    </select>
+                </div>
+                
+
+                <div class="form-group">
+                    <label for="address">Address:</label>
+                    <textarea name="address" id="address" placeholder="Enter Address"></textarea>
+                </div>
+            </div>
+
+            <!-- Section 2: Main Medical Problem -->
+            <div class="section" id="medical-problem">
+                <h3>2. Main Medical Problem</h3>
+
+                <div class="form-group">
+                    <label for="problem">Describe your main medical problem:</label>
+                    <textarea id="problem" name="problem" ></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="category">Category of Problem : </label>
+                    <div style = "display:grid; grid-template-columns: 2fr 1fr; column-gap:10%;">
+                        <input type="text" id = "category" value = "">
+                        <input type="button" value = "Smart-Search" id="ss_button">
+                    </div> 
+                </div>
+
+
+                <div id="row" style="justify-content: start;"> 
+                    <div class="form-group">
+                        <label for="tspan">For How long has this problem been persisting? </label>
+                        <input type="tspan" id = "tspan" value = "">
+                    </div>
+                </div>
+
+            </br></br>
+                <div class="form-group" id="qna">
+                    <label for="consult"> Have You consulted anywhere before ? </label>
+                    <label class = "radio" id = "gr">
+                        <input type = "radio" name = "consult_ans" id = "consult_y">Yes
+                    </label>
+                    <label class = "radio" id = "gr">
+                        <input type = "radio" name = "consult_ans" id = "consult_n">No
+                    </label>
+                </div>
+
+
+                
+                    <div class="form-group" >
+                        <label for="prm">Prior Medication:</label>
+                        <textarea id="prm" name="prm" ></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="feedback">Feedback:</label>
+                        <input type="text" id="fdbk" name="fdbk">
+                    </div>
+                
+            </div>
+
+            <!-- 2.1 HOMOEOPATHIC GENERALITIES -->
+            <div class="section" id="hom_gen">
+            
+                <h3>HOMOEOPATHIC GENERALITIES</h3>
+                <!-- <div style = "display:flex; align-items: center; justify-content: center;">
+                    <button id = "skip">SKIP</button>
+                </div> -->
+                
+                <div>
+                    
+                        <summary></summary>
+                        <div class="form-group" id = "qna2">
+                            <label for="temp" style="align-self: center;" >1. How do you feel the temperature around : </label>
+                            <select name="temp" id="temp">
+                                <option value="Chilly">Chilly</option>
+                                <option value="Warm">Warm</option>
+                                <option value="Ambithermal">Ambithermal</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group" id = "qna2">
+                            <label for="sucp" style="align-self: center;">2. Tendency to Catch Cold : </label>
+                            <select name="sucp" id="sucp">
+                                <option value="Catches cold easily">Catches cold easily</option>
+                                <option value="Doesn't catch cold easily">Doesn't catch cold easily</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group" id = "qna2">
+                            <label for="appr" style="align-self: center;">3. Appearance : </label>
+                            <select name="appr" id="appr">
+                                <option value="Obese">Obese</option>
+                                <option value="Slim">Slim</option>
+                                <option value="Skinny">Skinny</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group" id = "qna2">
+                            <label for="appetite" style="align-self: center;">4. Appetite : </label>
+                            <select name="appetite" id="appetite">
+                                <option value="High Apetite before meal">High Apetite before meal</option>
+                                <option value="Adequate Apetite before meal">Adequate Apetite before meal</option>
+                                <option value="Low Apetite before meal">Low Apetite before meal</option>
+                            </select>
+                        </div>
+                        <div class="form-group" id = "qna2">
+                            <label for="d_taste" style="align-self: center;">5. Desired Taste : </label>
+                            <select name="d_taste" id="d_taste">
+                                <option value="Spicy">Spicy</option>
+                                <option value="Sweet">Sweet</option>
+                                <option value="Sour">Sour</option>
+                                <option value="Salty">Salty</option>
+                                <option value="Bitter">Bitter</option>
+                                <option value="Plane">Plane</option>
+                            </select>
+                        </div>
+                        <div class="form-group" id = "qna2">
+                            <label for="a_food" style="align-self: center;">6. Food Aversion  : </label>
+                            <select name="a_food" id="a_food">
+                                <option value="Spicy">Spicy</option>
+                                <option value="Sweet">Sweet</option>
+                                <option value="Sour">Sour</option>
+                                <option value="Salty">Salty</option>
+                                <option value="Bitter">Bitter</option>
+                                <option value="Plane">Plane</option>
+                            </select>
+                        </div>
+                        <div class="form-group" id = "qna2">
+                            <label for="intol" style="align-self: center;">7. Intolerance : </label>
+                            <select name="intol" id="intol">
+                                <option value="Gets angry easily">Gets angry easily</option>
+                                <option value="Calm and gentle">Calm and gentle</option>
+                            </select>
+                        </div>
+                        <div class="form-group" id = "qna2">
+                            <label for="Pers" style="align-self: center;">8. Sweat : </label>
+                            <select name="Pers" id="Pers">
+                                <option value="High Perspiration">High Perspiration</option>
+                                <option value="Low/Normal Perspiration">Low/Normal Perspiration</option>
+                            </select>
+                        </div>
+                        <div class="form-group" id = "qna2">
+                            <label for="tongue" style="align-self: center;">9.Tongue : </label>
+                            <select name="tongue" id="tongue">
+                                <option value="Dry">Dry </option>
+                                <option value="Moist">Moist</option>
+                            </select>
+                        </div>
+                        <div class="form-group" id = "qna2">
+                            <label for="thirst" style="align-self: center;">10. Thirst : </label>
+                            <select name="thirst" id="thirst">
+                                <option value="Thirsty">Thirsty</option>
+                                <option value="Doesn't feel Thirsty">Doesn't feel Thirsty</option>
+                            </select>
+                        </div>
+                        <!-- <div class="form-group" id = "qna2">
+                            <label for="" style="align-self: center;">11. Stool : </label>
+                            <select name="" id="">
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+                        <div class="form-group" id = "qna2">
+                            <label for="" style="align-self: center;">12. Urine : </label>
+                            <select name="" id="">
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+                        <div class="form-group" id = "qna2">
+                            <label for="" style="align-self: center;">13. Sleep : </label>
+                            <select name="" id="">
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+                        <div class="form-group" id = "qna2">
+                            <label for="" style="align-self: center;">14. Dreams : </label>
+                            <select name="" id="">
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+                        <div class="form-group" id = "qna2">
+                            <label for="" style="align-self: center;">15. Thermal relation : </label>
+                            <select name="" id="sucp">
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+                        <div class="form-group" id = "qna2">
+                            <label for="" style="align-self: center;">16. Genaral Modalities : </label>
+                            <select name="" id="">
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                        </div> -->
+                    
+                </div>
+            
+            </div>
+
+            <!-- Section 3: Prior Medical History -->
+            <!-- <div class="section" id="medical-history">
+                <h3>3. PRIOR MEDICAL HISTORY</h3>
+                <div style = "display:flex; align-items: center; justify-content: center;">
+                    <button id = "skip">SKIP</button>
+                </div>
+
+                <div>
+                    <details>
+                        <summary></summary>
+                        <div class="form-group">
+                            <label for="history">List any previous medications or treatments:</label>
+                            <textarea id="history" name="history" required></textarea>
+                        </div>
+
+                        <h4>Tick the ones that you have:</h4>
+
+                        <div id="qna" style = "margin-bottom: 2%;">
+                            <label for="allergy">Allergies : </label>
+                            <input type="checkbox" id = "allergy">
+                            <input type="text">
+                        </div>
+
+                        <div id="qna" style = "margin-bottom: 2%;">
+                            <label for="chronic">Chronic Illness : </label>
+                            <input type="checkbox" id = "chronic">
+                            <input type="text" id = "chronic">
+                        </div>
+
+                        <div id="qna" style = "margin-bottom: 2%;">
+                            <label for="">  : </label>
+                            <input type="checkbox" id = "">
+                            <input type="text" id = "">
+                        </div>
+
+                        <div id="qna" style = "margin-bottom: 2%;">
+                            <label for="">  : </label>
+                            <input type="checkbox" id = "">
+                            <input type="text" id = "">
+                        </div>
+
+                        <div id="qna" style = "margin-bottom: 2%;">
+                            <label for="">  : </label>
+                            <input type="checkbox" id = "">
+                            <input type="text" id = "">
+                        </div>
+
+                        <div id="qna" style = "margin-bottom: 2%;">
+                            <label for="">  : </label>
+                            <input type="checkbox" id = "">
+                            <input type="text" id = "">
+                        </div>
+                    </details>
+                </div>
+            </div> -->
+
+            <!-- Section 4: General Survey -->
+            <div class="section" id="general-survey">
+            
+                <h3>4. General Survey</h3>
+                <!-- <div style = "display:flex; align-items: center; justify-content: center;">
+                    <button id = "skip">SKIP</button>
+                </div> -->
+
+                <div id="row" style="justify-content: space-evenly;">
+                    <div class="form-group">
+                        <label for="height">Height (cm):</label>
+                        <input type="number" id="height" name="height" >
+                    </div>
+                    <div class="form-group">
+                        <label for="weight">Weight (kg):</label>
+                        <input type="number" id="weight" name="weight" >
+                    </div>
+                </div>
+
+                <div id="row" style="justify-content: space-evenly;">
+                    <div class="form-group">
+                        <label for="bp">Blood Pressure (mmHg):</label>
+                        <input type="text" id="bp" name="bp" >
+                    </div>
+                    <div class="form-group">
+                        <label for="pulse">Pulse (per min):</label>
+                        <input type="text" id="pulse" name="pulse" >
+                    </div>
+                </div>
+
+                <div id="row" style="justify-content: space-evenly;">
+                    <div class="form-group">
+                        <label for="sp">SPO<sub>2</sub> : </label>
+                        <input type="text" id="sp" name="sp" >
+                    </div>
+                    <div class="form-group">
+                        <label for="sugar">Sugar Level (mg/dL):</label>
+                        <input type="number" id="sugar" name="sugar" >
+                    </div>
+                </div>
+                </br>
+                <div class="form-group" id="qna">
+                    <label for="db"> Are you Diabetic ? </label>
+                    <label class = "radio" id = "gr" >
+                        <input type = "radio" name = "db_ans" id = "db_y">Yes
+                    </label>
+                    <label class = "radio" id = "gr">
+                        <input type = "radio" name = "db_ans" id = "db_n">No
+                    </label>
+                </div>
+                
+                <div class="form-group" id="qna">
+                    <label for="ins"> Do you take Insulin ? </label>
+                    <label class = "radio" id = "gr" >
+                        <input type = "radio" name = "ins_ans" id = "ins_y">Yes
+                    </label>
+                    <label class = "radio" id = "gr">
+                        <input type = "radio" name = "ins_ans" id = "ins_n">No
+                    </label>
+                </div>
+
+                <div class="form-group" id="qna">
+                    <label for="ane"> Do you have Anaemia ? </label>
+                    <label class = "radio" id = "gr">
+                        <input type = "radio" name = "ane_ans" id = "ane_y">Yes
+                    </label>
+                    <label class = "radio" id = "gr">
+                        <input type = "radio" name = "ane_ans" id = "ane_n">No
+                    </label>
+                </div>
+
+                <div class="form-group" id="qna">
+                    <label for="h_dis"> Do you have Heart Disease ? </label>
+                    <label class = "radio" id = "gr">
+                        <input type = "radio" name = "h_dis_ans" id = "h_dis_y">Yes
+                    </label>
+                    <label class = "radio" id = "gr">
+                        <input type = "radio" name = "h_dis_ans" id = "h_dis_n">No
+                    </label>
+                </div>
+
+                <div class="form-group" id="qna">
+                    <label for="smoke"> Do you Smoke ? </label>
+                    <label class = "radio" id = "gr">
+                        <input type = "radio" name = "smoke_ans" id = "smoke_y">Yes
+                    </label>
+                    <label class = "radio" id = "gr">
+                        <input type = "radio" name = "smoke_ans" id = "smoke_n">No
+                    </label>
+                </div>
+
+                <div class="form-group" id="qna">
+                    <label for="alc"> Do you consume Alcohol ? </label>
+                    <label class = "radio" id = "gr">
+                        <input type = "radio" name = "alc_ans" id = "alc_y">Yes
+                    </label>
+                    <label class = "radio" id = "gr">
+                        <input type = "radio" name = "alc_ans" id = "alc_n">No
+                    </label>
+                </div>
+
+                <div class="form-group" id="qna">
+                    <label for="ment"> Do you have Depression/Mental Issues ? </label>
+                    <label class = "radio" id = "gr">
+                        <input type = "radio" name = "ment_ans" id = "ment_y">Yes
+                    </label>
+                    <label class = "radio" id = "gr">
+                        <input type = "radio" name = "ment_ans" id = "ment_n">No
+                    </label>
+                </div>      
+            </div>
+
+            <div class="form-group">
+                <!-- <input type="submit" value="Submit"> -->
+                <button type = "submit">SUBMIT</button>
+            </div>
+        </div>
+    </form>
+    
+
+    <script type="module">
+        
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-app.js";
+        import { getFirestore, collection, addDoc, setDoc , doc , getDoc } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-firestore.js";
+        let casenum;
+        const firebaseConfig = {
+            apiKey: "AIzaSyC5JLvPzsgav5U5dv3eLy511WodcTwCxk8",
+            authDomain: "medvault-3ab45.firebaseapp.com",
+            projectId: "medvault-3ab45",
+            storageBucket: "medvault-3ab45.appspot.com",
+            messagingSenderId: "769455123364",
+            appId: "1:769455123364:web:640ec301531a298779af31"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+
+        //generating random number
+        function incrementCaseNumber(lastCaseNumber) {
+    const alphabetPart = lastCaseNumber.substring(0, 2); // First two letters
+    const numericPart = parseInt(lastCaseNumber.substring(2), 10); // Last four digits
+
+    let newAlphabetPart = alphabetPart;
+    let newNumericPart = numericPart + 1;
+
+    if (newNumericPart > 9999) {
+        // Reset numeric part to 0001 and increment alphabet part
+        newNumericPart = 1;
+
+        // Increment the alphabet part
+        const firstChar = alphabetPart.charCodeAt(0); // ASCII value of the first letter
+        const secondChar = alphabetPart.charCodeAt(1); // ASCII value of the second letter
+
+        if (secondChar < 90) {
+            // If the second character is not 'Z', increment it
+            newAlphabetPart = String.fromCharCode(firstChar) + String.fromCharCode(secondChar + 1);
+        } else {
+            // If the second character is 'Z', reset it to 'A' and increment the first character
+            newAlphabetPart = String.fromCharCode(firstChar + 1) + "A";
+        }
+    }
+
+    // Format the new case number
+    return `${newAlphabetPart}${newNumericPart.toString().padStart(4, "0")}`;
+}
+
+// Function to generate a new case number
+async function generateCaseNumber(db) {
+    const trackerDocRef = doc(db, "metadata", "caseNumberTracker");
+
+    try {
+        // Retrieve the last used case number
+        const trackerDoc = await getDoc(trackerDocRef);
+
+        let lastUsedCaseNumber = "AA0000"; // Default starting case number
+        if (trackerDoc.exists()) {
+            lastUsedCaseNumber = trackerDoc.data().lastUsedCaseNumber;
+        }
+
+        // Increment the case number
+        const newCaseNumber = incrementCaseNumber(lastUsedCaseNumber);
+
+        // Update Firestore with the new case number
+            await setDoc(trackerDocRef, { lastUsedCaseNumber: newCaseNumber });
+
+            console.log("Generated Case Number:", newCaseNumber);
+            return newCaseNumber;
+        } catch (error) {
+            console.error("Error generating case number:", error);
+            alert("Failed to generate case number. Please try again.");
+            alert(error);
+            return null;
+        }
+    }
+
+    //Fetch new case number
+        document.getElementById("ag").addEventListener("click", async () => {
+            const newCaseNumber = await generateCaseNumber(db);
+            if (newCaseNumber) {
+                document.getElementById("case_no").value = newCaseNumber;
+                casenum = newCaseNumber;
+                document.getElementById('autoGenerateButton').disabled = true;
+            }
+        });
+
+       
+        
+
+        // Form submission
+        document.getElementById('patient-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            let medcase = document.getElementById("date").value;
+            let caseKey = `case${medcase}`; 
+            localStorage.setItem("caseKey",caseKey); //store CaseKey in local storage
+            //store caseNum in local Storage
+            localStorage.setItem("caseNumber",casenum);
+
+            const formData = {
+                caseNumber: document.getElementById("case_no").value,
+                date: document.getElementById("date").value,
+                basicDetails: {
+                    name: document.getElementById("name").value,
+                    age: document.getElementById("age").value,
+                    gender: document.querySelector('input[name="ans"]:checked')?.nextSibling.textContent.trim() || "Not Specified",
+                    bloodGroup: document.getElementById("blood-group").value,
+                    contact: document.getElementById("contact").value,
+                    opt_contact: document.getElementById("opt_contact").value,
+                    email: document.getElementById("email").value,
+                    state: document.getElementById("inputState").value,
+                    address: document.getElementById("address").value,
+                },
+                medicalProblem: {
+                    [caseKey]:{
+                    description: document.getElementById("problem").value,
+                    category: document.getElementById("category").value,
+                    duration: document.getElementById("tspan").value,
+                    prior: document.querySelector('input[name="consult_ans"]:checked')?.nextSibling.textContent.trim(),
+                    priorMedication: document.getElementById("prm").value || "No Medication before",
+                    feedback: document.getElementById("fdbk").value || "No Medication before",
+                    },
+                },
+                homoeopathicGeneralities: {
+                    temperaturePreference: document.getElementById("temp").value,
+                    coldTendency: document.getElementById("sucp").value,
+                    appearance: document.getElementById("appr").value,
+                    appetite: document.getElementById("appetite").value,
+                    desiredTaste:document.getElementById("d_taste").value ,
+                    FoodAversion: document.getElementById("a_food").value,
+                    Intolerance:document.getElementById("intol").value ,
+                    Sweat : document.getElementById("Pers").value,
+                    Tongue: document.getElementById("tongue").value,
+                    Thirst: document.getElementById("thirst").value,
+                },
+                generalSurvey: {
+                    height: document.getElementById("height").value,
+                    weight: document.getElementById("weight").value,
+                    bloodPressure: document.querySelector('input[name="bp"]').value,
+                    spO2: document.getElementById("sp").value,
+                    pulse: document.getElementById("pulse").value,
+                    sugarLevel: document.getElementById("sugar").value,
+                    diabetic: document.querySelector('input[name="db_ans"]:checked')?.nextSibling.textContent.trim() || "Not Specified",
+                    insulin: document.querySelector('input[name="ins_ans"]:checked')?.nextSibling.textContent.trim() || "No",
+                    anemia: document.querySelector('input[name="ane_ans"]:checked')?.nextSibling.textContent.trim() || "No" ,
+                    heartDisease: document.querySelector('input[name="cpain_ans"]:checked')?.nextSibling.textContent.trim() || "No" ,
+                    smoke: document.querySelector('input[name="cpain_ans"]:checked')?.nextSibling.textContent.trim() || "No",
+                    alcohol: document.querySelector('input[name="cpain_ans"]:checked')?.nextSibling.textContent.trim() || "No",
+                    mentalIssues: document.querySelector('input[name="cpain_ans"]:checked')?.nextSibling.textContent.trim() || "No" ,
+                },
+            };
+            
+
+            try {
+                alert("inside try block")
+                //await addDoc(collection(db, "trial2",casenum), formData);
+                await setDoc(doc(db, "trial2", casenum), formData);
+                alert("Form submitted successfully!");
+                document.getElementById('patient-form').reset();
+                alert("Redirecting to Medicine Suggestion page");
+                window.location.href = "med_sug.html";
+            } catch (error) {
+                console.error("Error submitting form data: ", error);
+                alert("Failed to submit the form. Please try again.");
+                alert(error);
+            }
+            finally{
+                
+            }
+        });
+    </script>  
+
+<footer>
+    © 2025 MedVault. All rights reserved.
+</footer>
+</body>
+</html>
