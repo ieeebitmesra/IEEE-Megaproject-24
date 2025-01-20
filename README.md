@@ -1,54 +1,127 @@
-<h1 align="center">IEEE MegaProject</h1>
-<h3 align="center">Organised by IEEE Student Branch BIT Mesra</h3>
+<h1 align="center">⚡ <b>WattSmart Wizard</b> ⚡</h1>
+<p align="center">
+    <i>An IoT + AI Driven Energy Monitoring and Optimization Solution</i><br>
+    <b>by</b> <b>The-X-Factors</b> 🤖
+</p>
+<p align="center">
+    <i>WattSmart addresses the critical global issue of resource wastage and inefficiency in energy and water management. Through a combination of IoT sensors, real-time data processing via cloud computing, and AI-powered analytics, the system monitors energy consumption and automates resource optimization. It offers personalized recommendations, alerts, and insights, allowing users to minimize waste and lower costs. The seamless integration of hardware and software makes the solution scalable, impacting both household and industrial sectors. Its focus on sustainability promotes environmental conservation while providing significant economic and social benefits.</i>
+</p>
 
-# About the Event
-"Don’t compare yourself with anyone in this world. If you do so, you are insulting yourself." – Bill Gates
+<h1 align="center">🌟 Team Details 🌟</h1>
+<p align="center">
+    <i>Jitendra Kumar Yadav - LNCT Bhopal</i><br>
+    <i>Om Narayan Singh - LNCT Bhopal</i>
+</p>
 
-After seven successful editions, we are here to present you with an opportunity of prototyping your imagination with the IEEE Mega Project.
+<h1 align="center">📚 Domain of Your Project 📚</h1>
+<p align="center">
+    <i>This project aims to tackle the problems of Energy mismanagement, Increasing Carbon Footprint and Surging Utility Costs. It falls within the intersection of IoT (Internet of Things), Machine Learning, and Energy Management Systems. It uses IoT sensors to collect real-time energy consumption data, which is then processed and analyzed using ML algorithms like Linear Regression for consumption prediction and DBSCAN for anomaly detection. The backend, built with Flask, handles data retrieval, management, and storage, enabling a seamless user experience. The system's primary goal is to optimize energy usage, reduce costs, and support sustainability efforts by providing actionable insights and predictive analytics for better decision-making in real-world applications.</i>
+</p>
 
-IEEE Mega Project is a platform to learn and experience the entire process of making a project, from ideation to execution and then it's presentation. It is a platform for students to showcase their innovative ideas in working.
-It's a team-based project building event, where college students collaborate together to bring their ideas to reality.
+<h1 align="center">💡 Idea 💡</h1>
+<p align="center">
+    WattSmart Wizard is designed to tackle inefficiencies in energy, power, costs by utilizing cutting-edge technologies like IoT, Cloud Computing, and Machine Learning. Below are the core features:
+</p>
 
-# Note
-**Note:**
-Ensure that your README file is comprehensive and up-to-date, covering the following mandatory details:
-- Team Details
-- Domain of your project
-- Idea
-- Achievements thus far
-- How to execute your code sample
+- **Real-Time Energy Data Collection**  
+  Energy consumption data is captured using IoT sensors connected to an ESP32 device, enabling wireless transmission of real-time readings for seamless monitoring.
+- **Cloud-Based Data Storage & Management**  
+  Data is securely stored on the cloud, allowing for scalable storage and remote access, enabling long-term analysis and retrieval.
+- **Seamless Data Retrieval for Processing**  
+  Data is fetched via a RESTful API to enable smooth integration between cloud storage and backend systems for real-time processing and insights.
+- **Data Analysis & Insight Generation**  
+  Data is processed using Python and data science libraries like NumPy, Pandas, and Matplotlib to uncover usage patterns, trends, and anomalies.
+- **Forecasting & Anomaly Detection**  
+  Machine learning models (Linear Regression for power consumption prediction and DBSCAN for anomaly detection) identify future energy usage, predict costs, and flag unexpected consumption spikes.
+- **Interactive Dashboard for Real-Time Monitoring**  
+  A Flask-based web application displays dynamic insights, predictions, and alerts, providing users with actionable data on their energy consumption and cost-saving opportunities.
+- **Impact on Energy Efficiency & Cost Reduction**  
+  The system helps users optimize energy usage, detect inefficiencies, and reduce costs, contributing to sustainability and more efficient energy consumption.
 
-These are essential details that must be included. You can refer to the `CONTRIBUTION.md` file present in this repository for a template. Copy and customize it according to your project's specifics. Feel free to add more details as needed.
+### System Architecture
 
-# Timeline
-December 20, 2024 - January 18, 2025
+![System Architecture](./Images%20and%20Diagrams/Screenshot%202025-01-20%20193231.png)
 
-# How to create a Pull Request
-Before you get started, these are the steps that you need to follow only ONCE at the begining:
-- [Fork this repository](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo#fork-an-example-repository) so that you can make your changes without affecting the original project until you're ready to merge them.
-- Go to your forked repository. Notice that the end of the URL should resemble `<your_github_username>/IEEE-Megaproject-24`.
-- Clone your forked repository: Click on the green `Code` button and copy the `HTTPS` URL of the repository.
-    - Now, open `gitbash`(or `Terminal`, if you are on UNIX-system) in the folder where you want to clone the repository, and issue the following command:
-    ```
-    git clone <paste_your_cloned_URL_here>
-    ```
-    - After cloning is done, confirm that a folder named `IEEE-Megaproject-24` is present in your current working directory.
+### Use Case Diagram
+
+![Use Case Diagram](./Images%20and%20Diagrams/Screenshot%202025-01-20%20193248.png)
+
+### Insights
+
+<p align="center">
+  <img src="./Images%20and%20Diagrams/Screenshot%202025-01-20%20192528.png" width="32%" />
+  <img src="./Images%20and%20Diagrams/Screenshot%202025-01-20%20194034.png" width="32%" />
+  <img src="./Images%20and%20Diagrams/Screenshot%202025-01-20%20192542.png" width="32%" />
+</p>
+
+### Prototype
+
+<p align="center">
+ <img src="./Images%20and%20Diagrams/Screenshot%202025-01-20%20192456.png" width="48%" />
+ <img src="./Images%20and%20Diagrams/Screenshot%202025-01-20%20192419.png" width="48%" />
+</p>
+
+#### Prototype Video
+[▶️ Watch the Working Prototype Video](https://drive.google.com/open?id=1VCtfgA5qeQg3G2F6PMCztmdKp7CI7jVL&usp=drive_copy)
+
+---
+
+### Impact 
+
+<div align="center">
+
+| Impact Area | Potential Benefits |
+|------------|-------------------|
+| 💰 **Energy Cost Reduction** | Optimizing usage can lower monthly energy bills by **15-30%** |
+| 🔧 **Early Equipment Maintenance** | Anomaly detection helps identify faulty equipment, potentially reducing **maintenance costs by 20-40%** |
+| 🌍 **Carbon Footprint Reduction** | Energy optimization can cut **1-2 tons of CO2 emissions per year** for an average household |
+| 💼 **Business Savings** | Scalable for enterprises, potentially saving **millions annually** on energy costs |
+| ⚡ **Peak Demand Reduction** | Real-time monitoring allows for better decision-making, reducing **peak demand by 10-20%** |
+| 🌱 **Supporting Renewable Energy** | Easier integration of **renewables**, improving grid efficiency |
+| 🔋 **Grid Efficiency** | Widespread use could reduce strain on national grids, saving **billions** globally |
+
+</div>
+
+---
+
+<h1 align="center">🏆 Achievements Thus Far 🏆</h1>
+<p align="center">
+    Here are some of the notable achievements and recognitions received by the X Factors team:
+</p>
+
+- **🏆 Top 5 Winners (4th Place)** – BuzzOnEarth Hackathon, National AI and Sustainability Hackathon by Intel and IIT Kanpur.
+
+- **🥇 Winners** – State Innovation Challenge by World Wildlife Federation (WWF).
+
+- **🎖️ Winners** – Swarnim-2024 A National Level Technological Expo, Science for Mankind Category, SAGE University.
+
+- **🚀 Winners** – Entrepreneurship-Week 2024, National Idea and Startup Competition at Jaipuria Institute of Management, Jaipur.
 
 
-Now, Follow the below steps for submitting each Project:
-- Copy your project folder.
-- Paste it in the local clone of `IEEE-Megaproject-24`(created in the above steps), inside the respective Project folder.
-- Rename your Project folder to your Team name.
-- Now, Right-click and open `gitbash` in the `IEEE-Megaproject-24` folder, and issue the following commands in order:
+<h1 align="center">🚀 How to Execute Your Code Sample 🚀</h1>
+<p align="center">
+    Follow these steps to run the WattSmart Wizard code on your local machine. Make sure you have Python and `pip` installed before proceeding.
+</p>
+
+### **Step 1: Clone the Repository**
+First, clone the repository to your local machine using the following command:
+```bash
+    git clone https://github.com/aumleo/The-X-Factors.git
 ```
-git add .
 
-git commit -m "Your commit message"
-
-git push -u origin main
+### **Step 2: Navigate to the Project Directory**
+```markdown
+    cd The-X-Factors
 ```
-- After pushing your project to github, you need to create a Pull Request to the main IEEE Megaproject repository. For that, open your forked repository in browser, and you'll notice a big green button saying “Compare & pull request”. Press it!
-- This will open a page in which you’ll be able to further edit the description for your proposed changes. Once, you are done with those, you can click on the "Create Pull Request button", and that's it.
- Congratulations, you just made a new Pull request!!! :fire:
 
-For doubts regarding pull requests ping your project coordinators.
+### **Step 3: Set Up a Virtual Environment (Optional but Recommended)**
+```bash
+    python -m venv venv
+    .\venv\Scripts\activate
+```
+
+### **Step 4: Install Dependencies**
+```markdown
+    pip install -r requirements.txt
+```
+---
