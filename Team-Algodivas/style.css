@@ -1,0 +1,299 @@
+*
+{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f4f4f4
+}
+
+nav
+{
+    
+    display: flex;
+    color: aliceblue;
+    background-color: #333;
+    height: 75px;
+    
+
+}
+
+.logo-section img
+{
+    padding: 5px;
+    height: 65px;
+    width: 100px;
+    margin-left: 15px;
+    margin-bottom: 5px;
+}
+.name-section
+{
+    color:aqua;
+   
+    padding-top: 0px;
+    font-size: xx-large;
+    
+}
+.lists ul{
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    font-size: large;
+    font-weight: 300;
+}
+.lists ul li{
+   list-style: none;
+   position: relative;
+   
+}
+a:link,a:visited{
+    
+    color: aliceblue;
+    text-decoration: none;
+    transition: 0.3 ease;
+}
+a:hover,
+a.active
+{
+    color: bisque;
+    transform: scale(1.2);
+    text-decoration: solid;
+    font-weight: 200;
+    
+}
+a.wishlistn{
+    color: bisque;
+}
+
+li a.active::after{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background-color: bisque ;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+body,html{
+    min-height:100%;
+}
+
+/* The hero image */
+.middle-container{
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./biscuits/shopping.jpg");
+
+  
+  height: 100vh;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Place text in the middle of the image */
+.code {
+  text-align: center;
+  position: absolute;
+  top: 75%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: "Dancing Script", serif;
+  
+
+}
+.products
+{
+    margin-top: 50px;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.products button
+{
+    background-color: rgb(49, 27, 27);
+    color: aliceblue;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 2px;
+    margin: 2px;
+    width:25%;
+    align-items: center;
+
+}
+.products button:hover {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.678);
+  }
+.products img{
+    height: 100%;
+    width: 100%;
+}
+
+.categories-heading
+{
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+    height: 150px;
+    background-color: #333;
+    color: beige;
+}
+.Categories
+{
+    width: 50%;
+    text-align: center;
+    border: 2px solid rgba(0, 0, 0, 0.358);
+    padding: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+    box-shadow: 0px 2px 8px black;
+    
+      
+}
+.Categories a
+{
+    color: black;
+    text-align: center;
+}
+.brand-categories img{
+    height: 200px;
+    width: 200px;
+   
+    margin-top: 50px;
+}
+.brand-categories p
+{
+    align-items: center;
+    color:rgba(0, 0, 0, 1);
+    font-weight: bold;
+}
+
+#biscuitID
+{
+    display: none;
+}
+#chocolateID
+{
+    display: none;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    width: 100%;
+    bottom: 0;
+}
+
+.footer-content {
+    font-size: 14px;
+}
+
+.footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/*****  Add to Cart page starts *****/
+
+#productCartContainer {
+    display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  background-color: #fff;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  justify-content: center;
+  gap:10px;
+  
+    
+  }
+  .cards {
+    position: relative; 
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    width: calc(30% - 10px); /* Adjust width to leave room for margin */
+    min-width: 250px;
+    display: inline-block;
+    text-align: center;
+    min-height: 300px;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.1);
+    margin: 10px; /* This adds spacing between cards */
+    transition: 0.3s ease;
+  }
+.wishlist {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: rgb(220, 69, 69); /* Heart color */
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.wishlist:hover {
+    color: #000000; /* Hover effect for heart */
+}
+
+.wishlist:focus {
+    outline: none;
+}
+
+ 
+  
+  .cards:hover{
+    box-shadow:20px 20px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .productImage {
+    max-width: 100%;
+    width: 32rem;
+    height: auto;
+  }
+
+  .cards h3 {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+  
+  .cards p {
+    font-size: 14px;
+    color: #777;
+  }
+  
+  .cards .price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #5cb85c;
+  }
+
+  .addToCartElement {
+    margin: 0;
+    padding: 0;
+}
+  
+  
+  button{
+    background-color: rgb(49, 27, 27);
+    color:#fff;
+    font-weight: bold;
+    border: none;
+    padding: 5px;
+    gap: 1rem;
+    border-radius: 100px;
+  }
