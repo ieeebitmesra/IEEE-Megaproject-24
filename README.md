@@ -1,90 +1,54 @@
+<h1 align="center">IEEE MegaProject</h1>
+<h3 align="center">Organised by IEEE Student Branch BIT Mesra</h3>
 
-# Ganga Water Quality Analysis and Agriculture Recommendation
-## Team Details
+# About the Event
+"Don’t compare yourself with anyone in this world. If you do so, you are insulting yourself." – Bill Gates
 
-### Team Name:
-**AB**
+After seven successful editions, we are here to present you with an opportunity of prototyping your imagination with the IEEE Mega Project.
 
-### Team Members:
-- Amisha Krishna Gupta  
-- Nikishaa Rama Gupta  
+IEEE Mega Project is a platform to learn and experience the entire process of making a project, from ideation to execution and then it's presentation. It is a platform for students to showcase their innovative ideas in working.
+It's a team-based project building event, where college students collaborate together to bring their ideas to reality.
 
-## Domain of Your Project
-**Artificial Intelligence (AI)**
+# Note
+**Note:**
+Ensure that your README file is comprehensive and up-to-date, covering the following mandatory details:
+- Team Details
+- Domain of your project
+- Idea
+- Achievements thus far
+- How to execute your code sample
 
-## Idea
-The project aims to analyze the Ganga river water quality using AI and provide agriculture-related recommendations based on water quality parameters. It predicts critical water quality indicators and suggests suitable crops for sustainable farming practices based on real-time data.
+These are essential details that must be included. You can refer to the `CONTRIBUTION.md` file present in this repository for a template. Copy and customize it according to your project's specifics. Feel free to add more details as needed.
 
-## Achievements Thus Far
-- Developed an initial model for water quality analysis.
-- Integrated machine learning algorithms for predicting water quality parameters.
-- Identified key agriculture recommendations based on water quality data.
+# Timeline
+December 20, 2024 - January 18, 2025
 
-## How to Execute Your Code Sample
-1. Clone the repository to your local system:
-   ```bash
-   git clone https://github.com/Amisha-Krishna-29/IEEE-Megaproject-24
+# How to create a Pull Request
+Before you get started, these are the steps that you need to follow only ONCE at the begining:
+- [Fork this repository](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo#fork-an-example-repository) so that you can make your changes without affecting the original project until you're ready to merge them.
+- Go to your forked repository. Notice that the end of the URL should resemble `<your_github_username>/IEEE-Megaproject-24`.
+- Clone your forked repository: Click on the green `Code` button and copy the `HTTPS` URL of the repository.
+    - Now, open `gitbash`(or `Terminal`, if you are on UNIX-system) in the folder where you want to clone the repository, and issue the following command:
+    ```
+    git clone <paste_your_cloned_URL_here>
+    ```
+    - After cloning is done, confirm that a folder named `IEEE-Megaproject-24` is present in your current working directory.
 
-## Overview  
-This project leverages Artificial Intelligence (AI) and Machine Learning (ML) to analyze Ganga river water quality and provide agriculture-related recommendations.  
-The system predicts key water quality parameters such as:  
-- **pH**  
-- **Dissolved Oxygen (DO)**  
-- **Biochemical Oxygen Demand (BOD)**  
-- **Total Suspended Solids (TSS)**  
 
-Based on these predictions, it recommends suitable crops tailored to water quality and soil conditions, ensuring sustainable farming practices.
-
----
-
-## How to Execute  
-
-### 1. Clone the Repository  
-Clone the repository to your local system using the following command:  
-```bash
-git clone https://github.com/Amisha-Krishna-29/IEEE-Megaproject-24
+Now, Follow the below steps for submitting each Project:
+- Copy your project folder.
+- Paste it in the local clone of `IEEE-Megaproject-24`(created in the above steps), inside the respective Project folder.
+- Rename your Project folder to your Team name.
+- Now, Right-click and open `gitbash` in the `IEEE-Megaproject-24` folder, and issue the following commands in order:
 ```
+git add .
 
-### 2. Navigate to the Project Directory  
-Change into the project directory:  
-```bash
-cd IEEE-Megaproject-24
+git commit -m "Your commit message"
+
+git push -u origin main
 ```
+- After pushing your project to github, you need to create a Pull Request to the main IEEE Megaproject repository. For that, open your forked repository in browser, and you'll notice a big green button saying “Compare & pull request”. Press it!
+- This will open a page in which you’ll be able to further edit the description for your proposed changes. Once, you are done with those, you can click on the "Create Pull Request button", and that's it.
+ Congratulations, you just made a new Pull request!!! :fire:
 
-### 3. Install Dependencies  
-Install all required Python libraries listed in the `requirements.txt` file:  
-```bash
-pip install -r requirements.txt
-```
-
-### 4. Set Up Keras Model File Paths  
-- Update the paths to all Keras model files in the code to match their location on your system.  
-- Open the relevant scripts, locate the model file paths, and adjust them as required.
-
-### 5. Run the Main Script  
-Execute the primary file, `homey.py`, to start the program:  
-```bash
-python homey.py
-```
-
----
-
-## 📂 Key Files  
-
-### 1. `homey.py`  
-The main script for running the application. It integrates the water quality analysis and agriculture recommendation modules.  
-
-### 2. Keras Model Files  
-Pretrained models used for predictive analysis. Ensure their file paths are correctly configured before executing the program.
-
----
-
-## ✨ Features  
-
-### Water Quality Analysis  
-- Predicts real-time water quality parameters and trends.  
-- **Classified Feedback System**  
-
-### Agriculture Recommendations  
-- Suggests suitable crops based on water quality, soil conditions, and seasonal factors.  
-- **Classified Feedback System**
+For doubts regarding pull requests ping your project coordinators.
