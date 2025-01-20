@@ -29,3 +29,13 @@ SAFE REACH is a crowd-sourced disaster management application designed to operat
 - IoT Devices - ESP32, LoRa Modules (Long-range communication)
 - Satellite Communication - C-Band (For emergency communication with government approval)
 - Sensors - Environmental monitoring (water level)
+
+## Acheivements So Far
+- Successfully developed a working prototype with core features such as distress call management, real-time updates, and resource tracking.
+- Implemented offline communication using LoRa modules, ensuring connectivity in network-deprived areas.
+- Integrated Firebase for cloud data storage and user authentication.
+- Developed disaster mapping features powered by crowd-sourced data and IoT sensor inputs.
+
+## Demo Video
+We’ve put together a detailed working demo of the SAFE REACH application, showcasing its key features and functionalities in action.
+- 👉 **Watch the demo here:** https://drive.google.com/drive/folders/1zwfnYA9VvPVQF5_FOlluaaJgi75DbCA2?usp=sharing
