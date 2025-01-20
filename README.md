@@ -48,7 +48,7 @@ EcoChain aims to address the challenges in carbon management by leveraging block
    - Install dependencies: `npm install`  
 
 3. **Run the Project:**  
-   - Start the server: `npm start`  
+   - Start the server: `npm run dev`  
    - Access the application on your local machine at `http://localhost:3000`.  
 
 4. **Testing the Features:**  
