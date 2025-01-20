@@ -25,3 +25,7 @@ SAFE REACH is a crowd-sourced disaster management application designed to operat
 - Application Development Framework - Flutter
 - Backend - NodeJs, Django
 - Database - Firebase
+- APIs - Weather APIs, Location Services (Google Maps API)
+- IoT Devices - ESP32, LoRa Modules (Long-range communication)
+- Satellite Communication - C-Band (For emergency communication with government approval)
+- Sensors - Environmental monitoring (water level)
