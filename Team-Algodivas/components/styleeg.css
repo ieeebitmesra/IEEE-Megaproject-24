@@ -1,0 +1,148 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  h1 {
+    margin: 0;
+  }
+  
+  h2 {
+    color: #333;
+    text-align: center;
+  }
+  
+  .products-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+  }
+  
+  .search {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  #searchBar {
+    text-align: center;
+    padding: 10px;
+    width: 250px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .productsall {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+  }
+  
+  .product-card {
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    width: calc(30% - 10px);
+    min-width: 250px;
+    display: inline-block;
+    text-align: center;
+    min-height: 300px;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    transition: 0.3s ease;
+  }
+  
+  .product-card:hover {
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  .imageContainer {
+    position: relative;
+  }
+  
+  .wishlist {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #000;  /* Default black color */
+    transition: color 0.3s;
+  }
+  
+  .wishlist.liked i {
+    color: #e74c3c;  /* Red when liked */
+  }
+  
+  .wishlist:hover i {
+    color: #c0392b;  /* Slightly darker red on hover */
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .product-card img {
+    width: 75%;
+    border-radius: 20px;
+  }
+  
+  .product-card h3 {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+  
+  .product-card p {
+    font-size: 14px;
+    color: #777;
+  }
+  
+  button {
+    background-color: rgb(49, 27, 27);
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    padding: 10px;
+    border-radius: 100px;
+  }
+  
+  .product-card a {
+    text-decoration: none;
+    color: #f4f4f4;
+  }
+  
+  .product-card .cart {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    background-color: rgb(237, 214, 214);
+    color: rgb(146, 5, 5);
+  }
+  

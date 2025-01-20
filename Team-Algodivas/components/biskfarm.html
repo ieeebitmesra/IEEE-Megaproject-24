@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUICK BARGAIN</title>
+    <link rel="stylesheet" href="styles1.css">
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </head>
+</head>
+<body>
+    <header>
+        <h1>QUICK BARGAIN</h1>
+    </header>
+
+    <!-- Manually set filter parameter in HTML (for example, filtering by category) -->
+    <div id="productFilter" data-filter-category="Biskfarm"></div>
+
+    <!-- Display the products -->
+    <section class="products-list">
+        <h2>Available Products</h2>
+        <div id="productDisplay"></div>
+        <!-- Template for product card -->
+        <template id="productTemplate">
+            <div class="product-card">
+                <div class="imageContainer">
+                    <img class="productImage" src="" alt="" />
+                    <button class="add-to-cart-button remove-to-cart-button wishlist">
+                      <i class="fa-solid fa-heart"></i>
+                  </button>
+                  </div>
+                  </button>
+                <h3></h3>
+                <p></p>
+                <a href=""><button class="price1"></button></a>
+                <a href=""><button class="price2"></button></a>
+                
+              
+            </div>
+          </template>
+    </section>
+
+    <script src="script1.js"></script>
+</body>
+</html>
