@@ -21,11 +21,39 @@
 
 ---
 
-## 🎯 **Future Vision**  
-- Collaborative features like **polls** and **forums**  
-- Real-time **chat** and **video capabilities**  
-- Gamification with **badges** and **leaderboards** 🏆  
-- AI-powered recommendations for **events and clubs** 🤖  
+## 🚀 Tech Stack  
+
+- **Frontend**  
+  - ⚛️ [React.js](https://reactjs.org/) - A JavaScript library for building user interfaces.  
+  - ⬛ [Next.js](https://nextjs.org/) - The React framework for production-grade applications.  
+  - 🌬️ [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework for styling.  
+
+- **Backend**  
+  - 🖧 [Appwrite](https://appwrite.io/) - A backend server for web, mobile, and Flutter developers.  
+
+
+## 🎯 Future Vision  
+
+- 🌐 **Integrated Campus Experience**  
+  - A unified platform that seamlessly combines navigation, event discovery, and resource management for a holistic campus guide.  
+  - Personalized user journeys based on preferences, schedules, and past activities.  
+
+- 🗨️ **Collaborative Features**  
+  - Create and participate in **polls**, **forums**, and discussions to build a vibrant campus community.  
+
+- 📹 **Real-Time Communication**  
+  - Instant **chat** and **video call capabilities** to connect with peers, faculty, or club members effortlessly.  
+
+- 🏆 **Engaging Gamification**  
+  - Earn **badges** and climb **leaderboards** for active participation in events and campus activities.  
+
+- 🤖 **AI-Powered Recommendations**  
+  - Intelligent suggestions for **events**, **clubs**, and **resources** based on user behavior and interests.  
+
+- 📚 **Ultimate Campus Guide**  
+  - The most comprehensive and dynamic campus guide, combining real-time updates, interactive maps, and event information for a seamless experience.  
+  - Offline access to key campus resources and navigation to ensure reliability at all times.  
+
 
 ---
 
