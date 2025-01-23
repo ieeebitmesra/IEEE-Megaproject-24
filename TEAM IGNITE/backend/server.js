@@ -19,11 +19,12 @@ const app = express();
 
 // Configure CORS
 const corsOptions = {
-  origin: '*', 
-  methods: ['GET', 'POST', 'PUT', 'DELETE'], 
+  origin: ['https://ieee-megaproject-24.vercel.app'], 
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization'],
 };
 app.use(cors(corsOptions));
+
 
 app.use(express.json());
 app.use(morgan('dev'));
