@@ -73,11 +73,11 @@ Peacify is a mobile app designed to help users analyze and manage their mental h
 
 2. Install dependencies:
    - *Flutter*:
-     bash
+     ```bash
      flutter pub get
      
    - *Python*:
-     bash
+     ```bash
      pip install -r requirements.txt
      
 
@@ -87,17 +87,53 @@ Peacify is a mobile app designed to help users analyze and manage their mental h
    - Enable Authentication and Firestore in the Firebase Console.
 
 4. Run the backend:
-   bash
+   ```bash
    python app.py
    
 
 5. Run the Flutter app:
-   bash
+   ```bash
    flutter run
    
 
 ## 🚀Deployment
 - Backend services are deployed on *Render* for reliable and scalable performance.
+
+---
+
+## 🌍 **Scalability**
+
+The app is built with scalability in mind, allowing for future expansions, including:
+
+1. **Multi-Language Support**  
+   - Broaden access by supporting diverse populations through multiple language options.
+
+2. **Enhanced AI Chatbots**  
+   - Provide real-time mental health support and personalized therapy suggestions.  
+
+3. **Wearable Device Integration**  
+   - Enable tracking of stress, sleep, and activity levels for more comprehensive mental health evaluations.  
+
+4. **Partnerships**  
+   - Collaborate with mental health organizations and professionals to offer an expanded range of resources and support.
+
+5. **Dual Login for Patients and Doctors**  
+   - Separate login profiles designed for:  
+     - **Patients**: Schedule appointments, access mental health resources, and interact with doctors.  
+     - **Doctors**: Manage appointments, review patient assessments, and provide personalized advice.
+
+6. **In-App Communication**  
+   - **Text-Based Conversations**: Secure chat functionality for communication between patients and doctors.  
+   - **Video Conferencing**: Real-time video consultations for effective therapy sessions.
+
+7. **Enhanced Gamification**  
+   - Introduce streaks, leaderboards, and achievement badges to maintain user engagement.  
+   - Users can maintain daily streaks by:  
+     - Talking about their day with the AI Bot.  
+     - Uploading smiling selfies to maintain streak progress.
+
+---  
+
 
 ## 🖼️ Screenshots
 ![onb](https://github.com/user-attachments/assets/022f9f75-50ad-40d2-b2f2-309ed14fc3a5)
