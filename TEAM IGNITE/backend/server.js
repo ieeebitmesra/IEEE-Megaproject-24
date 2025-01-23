@@ -20,6 +20,7 @@ const app = express();
 // Configure CORS
 const corsOptions = {
   origin: ['https://ieee-megaproject-24.vercel.app'], 
+    credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization'],
 };
