@@ -18,14 +18,8 @@ connectDB();
 // Middlewares
 const app = express();
 
-// Configure CORS
-const corsOptions = {
-  origin: ['https://ieee-megaproject-24.vercel.app'], // Add other origins if needed
-  credentials: true,
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  allowedHeaders: '*', // Allow all headers for simplicity
-};
-app.use(cors(corsOptions));
+// Unrestricted CORS setup
+app.use(cors());
 app.use(express.json());
 app.use(morgan('dev'));
 
@@ -35,7 +29,6 @@ app.use('/api/v1/category', categoryRoutes);
 app.use('/api/v1/product', productRoutes);
 app.use('/api/v1/bargain', bargainRouter);
 
-// Serve frontend (if applicable)
 const __dirname = path.resolve();
 app.use(express.static(path.join(__dirname, './frontend/build')));
 app.get('*', (req, res) => {
@@ -44,7 +37,7 @@ app.get('*', (req, res) => {
 
 // Default route
 app.get('/', (req, res) => {
-  res.send('<h1>Welcome to your server</h1>');
+  res.send('<h1>Welcome to your unrestricted server</h1>');
 });
 
 // Error handling middleware
