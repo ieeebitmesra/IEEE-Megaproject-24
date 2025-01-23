@@ -43,7 +43,8 @@ function App() {
         <Route path="/LandingPageRegister" element={<LandingPageRegister />} />
             <Route path="/LandingPageLogin" element={<LandingPage />} />
             <Route path="/LoginPageForFarmer" element={<LoginPageForFarmer />} />
-            <Route path="/LoginPageForWholeseller" element={<LoginPageForWholeseller />} />
+            <Route path="/LoginPageForWholeseller" element={<LoginPageForWholeseller />} /> <Route path="/RegisterPageForFarmer" element={<RegisterPageForFarmer />} />
+            <Route path="/RegisterPageForWholeseller" element={<RegisterPageForWholeseller />} />
 
             <Route element={<RoleBasedRoute />}>
             <Route path="/HomePage" element={<AfterLoginPageCommon />} />
@@ -60,8 +61,7 @@ function App() {
             
             <Route path="/search" element={<SearchProducts />} />
            
-            <Route path="/RegisterPageForFarmer" element={<RegisterPageForFarmer />} />
-            <Route path="/RegisterPageForWholeseller" element={<RegisterPageForWholeseller />} />
+           
 
               <Route path="Dashboard/FarmerDashboard1" index element={<FarmerDashboard1 />} />
               <Route path="AddNewProductFarmer" element={<AddProductByFarmer />} />

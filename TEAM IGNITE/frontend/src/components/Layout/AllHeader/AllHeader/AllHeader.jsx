@@ -4,12 +4,12 @@ import { useAuth } from '../../../../context/auth';
 import toast from "react-hot-toast";
 import { NavLink } from "react-router-dom";
 import tractorSVG from "../../../../assets/Screenshot_2023-11-23_173055-removebg-preview (1).png"
-import { useCart } from '../../../../context/Cart';
+// import { useCart } from '../../../../context/Cart';
 import { useNavigate } from "react-router-dom";
 
 const AllHeader = () => {
   const [auth, setAuth] = useAuth();
-  const [cart] = useCart();
+  // const [cart] = useCart();
   const navigate = useNavigate();
 
   const handleLogout = () => {
