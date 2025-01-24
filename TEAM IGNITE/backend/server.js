@@ -15,23 +15,25 @@ dotenv.config();
 // Database configuration
 connectDB();
 
-// Express app and CORS configuration
 const app = express();
 
-// Specific CORS configuration
 const corsOptions = {
-  origin: 'https://ieee-megaproject-24.vercel.app',
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
+  origin: ['https://ieee-megaproject-24.vercel.app', 'http://localhost:3000'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'Origin', 'X-Requested-With', 'Accept'],
   credentials: true,
   optionsSuccessStatus: 200
 };
 
+// Apply CORS with options
 app.use(cors(corsOptions));
 
 // Middlewares
 app.use(express.json());
 app.use(morgan('dev'));
+
+// Preflight request handler
+app.options('*', cors(corsOptions));
 
 // Routes
 app.use('/api/v1/auth', authRoutes);
@@ -42,19 +44,26 @@ app.use('/api/v1/bargain', bargainRouter);
 const __dirname = path.resolve();
 app.use(express.static(path.join(__dirname, './frontend/build')));
 
+// Catch-all route handler
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, './frontend/build/index.html'));
 });
 
-// Default route
-app.get('/', (req, res) => {
-  res.send('<h1>Welcome to your unrestricted server</h1>');
+// Comprehensive error handling middleware
+app.use((err, req, res, next) => {
+  console.error('Unhandled Error:', err);
+  res.status(err.status || 500).json({
+    error: err.message || 'Internal Server Error',
+    stack: process.env.NODE_ENV === 'development' ? err.stack : undefined
+  });
 });
 
-// Error handling middleware
-app.use((err, req, res, next) => {
-  console.error(err.stack);
-  res.status(500).json({ error: err.message });
+// 404 handler for undefined routes
+app.use((req, res, next) => {
+  res.status(404).json({
+    error: 'Not Found',
+    path: req.path
+  });
 });
 
 // Port and Server
