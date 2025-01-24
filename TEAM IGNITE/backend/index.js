@@ -11,8 +11,6 @@ import bargainRouter from './routes/bargainRoutes.js';
 import path from 'path';
 
 dotenv.config();
-
-// Database configuration
 connectDB();
 
 const app = express();
@@ -25,17 +23,16 @@ const corsOptions = {
   optionsSuccessStatus: 200
 };
 
-// Apply CORS with options
 app.use(cors(corsOptions));
-
-// Middlewares
 app.use(express.json());
 app.use(morgan('dev'));
-
-// Preflight request handler
 app.options('*', cors(corsOptions));
 
-// Routes
+// Root route to print "hello"
+app.get('/', (req, res) => {
+  res.send('hello');
+});
+
 app.use('/api/v1/auth', authRoutes);
 app.use('/api/v1/category', categoryRoutes);
 app.use('/api/v1/product', productRoutes);
@@ -44,12 +41,10 @@ app.use('/api/v1/bargain', bargainRouter);
 const __dirname = path.resolve();
 app.use(express.static(path.join(__dirname, './frontend/build')));
 
-// Catch-all route handler
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, './frontend/build/index.html'));
 });
 
-// Comprehensive error handling middleware
 app.use((err, req, res, next) => {
   console.error('Unhandled Error:', err);
   res.status(err.status || 500).json({
@@ -58,7 +53,6 @@ app.use((err, req, res, next) => {
   });
 });
 
-// 404 handler for undefined routes
 app.use((req, res, next) => {
   res.status(404).json({
     error: 'Not Found',
@@ -66,8 +60,7 @@ app.use((req, res, next) => {
   });
 });
 
-// Port and Server
-const port = https://ieee-megaproject-24-bin6.vercel.app || 8080;
+const port = process.env.PORT || 8080;
 app.listen(port, () => {
   console.log(`Server running on ${port}`.bgCyan.white);
 });
