@@ -48,7 +48,7 @@ const AllHeader = () => {
               <img className='tractoraaaasvg' src={tractorSVG} alt='tractor'></img>
             </div>
             <div className="linkContainerAllHeader">
-              <a className="optionAllheader" href="/LandingPageLogin">
+              <a className="optionAllheader" href="/">
                 Login
               </a>
               <a className="optionAllheader" href="/LandingPageRegister">
