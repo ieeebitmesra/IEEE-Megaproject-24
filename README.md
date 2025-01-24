@@ -1,4 +1,6 @@
 # FARM CONNECT 🌾
+## 🔗Live link - https://ieee-megaproject-24.vercel.app/
+
 
 A revolutionary full-stack web application connecting farmers directly with wholesale buyers, enabling global agricultural trade at fair prices.
 
